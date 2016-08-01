@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cube_me.cubeme.Contacts.ContactsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/contactAddFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginLeft="@dimen/floatMarginLeft"
+        android:layout_marginTop="@dimen/floatMarginTop"
+        android:src="@drawable/ic_add_white_24dp"
+        app:fabSize="normal" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyler_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</FrameLayout>

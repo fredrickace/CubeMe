@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_contact_new"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layoutBackGround"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+        </include>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/account_viewHeight"
+                    android:background="@color/groupBackground"
+                    android:gravity="fill_vertical"
+                    android:paddingLeft="@dimen/account_groupTextLeftPadding"
+                    android:text="Contact Information"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/account_groupTextSize" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contact_firstNameTextView"
+                        android:layout_width="@dimen/contact_TV_viewWidth"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/contact_TV_rightPadding"
+                        android:text="*First Name"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/contact_secondaryTextSize" />
+
+                    <EditText
+                        android:id="@+id/contact_firstNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="left|center"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/editText_leftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/contact_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contact_lastNameTextView"
+                        android:layout_width="@dimen/contact_TV_viewWidth"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/contact_TV_rightPadding"
+                        android:text="Second Name"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/contact_secondaryTextSize" />
+
+                    <EditText
+                        android:id="@+id/contact_lastNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="left|center"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingLeft="@dimen/editText_leftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/contact_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contact_companyNameTextView"
+                        android:layout_width="@dimen/contact_TV_viewWidth"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/contact_TV_rightPadding"
+                        android:text="Company"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/contact_secondaryTextSize" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/contact_companyNameAutoComplete"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/editText_leftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/contact_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contact_contactTypeTextView"
+                        android:layout_width="@dimen/contact_TV_viewWidth"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/contact_TV_rightPadding"
+                        android:text="Type of contact"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/account_secondaryTextSize" />
+
+                    <Spinner
+                        android:id="@+id/contact_contactTypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="@dimen/editText_leftPadding"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/mainText"
+                        android:theme="@style/EditTextTheme" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contact_contactNumberTextView"
+                        android:layout_width="@dimen/contact_TV_viewWidth"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/contact_TV_rightPadding"
+                        android:text="Contact Number"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/contact_secondaryTextSize" />
+
+                    <EditText
+                        android:id="@+id/contact_contactNumberCodeEditText"
+                        android:layout_width="@dimen/phoneCountryCode"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="left|center"
+                        android:hint="+974"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="4"
+                        android:paddingLeft="@dimen/editText_leftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/contact_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+
+                    <EditText
+                        android:id="@+id/contact_contactNumberEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="left|center"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/editText_leftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/contact_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contact_emailTextView"
+                        android:layout_width="@dimen/contact_TV_viewWidth"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/contact_TV_rightPadding"
+                        android:text="Email Id"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/contact_secondaryTextSize" />
+
+                    <EditText
+                        android:id="@+id/contact_emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/contact_viewHeight"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="left|center"
+                        android:hint="Enter First Name"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="@dimen/editText_leftPadding"
+                        android:text=" "
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/contact_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="30dp">
+
+
+                    <Button
+                        android:id="@+id/contact_addbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Add"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/contact_textSize" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

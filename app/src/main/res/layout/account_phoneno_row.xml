@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <EditText
+        android:id="@+id/account_newContactNoTextView"
+        android:layout_width="@dimen/account_TV_viewWidth"
+        android:layout_height="@dimen/account_viewHeight"
+        android:background="@color/textViewBackGround"
+        android:gravity="right|fill_vertical"
+        android:paddingRight="@dimen/textView_RightPadding"
+        android:text="Phone"
+        android:textColor="@color/secondaryText"
+        android:textSize="@dimen/account_secondaryTextSize" />
+
+    <EditText
+        android:id="@+id/account_newContactCountryCodeEditText"
+        android:layout_width="@dimen/phoneCountryCode"
+        android:layout_height="@dimen/account_viewHeight"
+        android:background="@drawable/custom_edittext"
+        android:hint="+974"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:maxLength="4"
+        android:paddingLeft="@dimen/editText_leftPadding"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/account_mainTextSize"
+        android:theme="@style/EditTextTheme" />
+
+    <EditText
+        android:id="@+id/account_newContactPhoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/account_viewHeight"
+        android:background="@drawable/custom_edittext"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:paddingLeft="@dimen/editText_leftPadding"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/account_mainTextSize"
+        android:theme="@style/EditTextTheme" />
+
+</LinearLayout>

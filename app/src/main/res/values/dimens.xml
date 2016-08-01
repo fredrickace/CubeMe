@@ -1,0 +1,63 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="row_text">15sp</dimen>
+    <dimen name="textView_add">15sp</dimen>
+    <dimen name="editText_add">15sp</dimen>
+    <dimen name="textView_leftPadding">0dp</dimen>
+    <dimen name="textView_RightPadding">10dp</dimen>
+    <dimen name="editText_leftPadding">5dp</dimen>
+    <dimen name="floatMarginTop">420dp</dimen>
+    <dimen name="floatMarginLeft">280dp</dimen>
+    <dimen name="phoneCountryCode">60dp</dimen>
+
+    <!--Contact addNew Activity Dimens-->
+    <dimen name="contact_textSize">15sp</dimen>
+    <dimen name="contact_TV_rightPadding">15dp</dimen>
+    <dimen name="contact_TV_viewWidth">120dp</dimen>
+    <dimen name="contact_viewTextSize">15sp</dimen>
+    <dimen name="contact_viewHeight">60dp</dimen>
+    <dimen name="contact_secondaryTextSize">12sp</dimen>
+    <dimen name="contact_mainTextSize">15sp</dimen>
+
+
+    <!--Account Add new Activity Dimens-->
+    <dimen name="account_viewTextSize">15sp</dimen>
+    <dimen name="account_mainTextSize">15sp</dimen>
+    <dimen name="account_groupTextLeftPadding">10dp</dimen>
+    <dimen name="account_groupTextSize">15sp</dimen>
+    <dimen name="account_secondaryTextSize">12sp</dimen>
+    <dimen name="account_TV_rightPadding">15dp</dimen>
+    <dimen name="account_TV_viewWidth">150dp</dimen>
+    <dimen name="account_viewHeight">50dp</dimen>
+
+    <!--Account ViewDetails Fragments Dimens-->
+    <dimen name="accountViewDetail_secondaryTV_width">110dp</dimen>
+    <dimen name="accountViewDetail_TV_height">25dp</dimen>
+    <dimen name="accountViewDetail_TV_mainText">15sp</dimen>
+    <dimen name="accountViewDetail_TV_secondaryText">12sp</dimen>
+    <dimen name="accountViewDetail_secondaryTV_rightPadding">10dp</dimen>
+    <dimen name="accountViewDetail_mainTV_leftPadding">5dp</dimen>
+    <dimen name="accountViewDetail_groupLeftPadding">10dp</dimen>
+    <dimen name="accountViewDetail_groupTextSize">15sp</dimen>
+    <dimen name="accountViewDetail_groupTV_height">40dp</dimen>
+    <dimen name="accountViewDetail_linearLayoutElevtion">20dp</dimen>
+
+
+    <!--Inquiry Add New Inquiry Dimens-->
+    <dimen name="inquiryNew_viewTextSize">15sp</dimen>
+    <dimen name="inquiryNew_mainTextSize">15sp</dimen>
+    <dimen name="inquiryNew_groupTextLeftPadding">10dp</dimen>
+    <dimen name="inquiryNew_groupTextSize">15sp</dimen>
+    <dimen name="inquiryNew_secondaryTextSize">12sp</dimen>
+    <dimen name="inquiryNew_TV_rightPadding">15dp</dimen>
+    <dimen name="inquiryNew_TV_viewWidth">120dp</dimen>
+    <dimen name="inquiryNew_viewHeight">50dp</dimen>
+    <dimen name="inquiryNew_mainTextLeftPadding">5dp</dimen>
+
+
+
+
+</resources>

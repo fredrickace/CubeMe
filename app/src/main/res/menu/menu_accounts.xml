@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_Accounts_Contacts"
+        android:title="Contacts"
+        android:icon="@drawable/ic_contacts_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Accounts_Inquiry"
+        android:title="Inquiries"
+        android:icon="@drawable/ic_new_releases_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Accounts_Estimations"
+        android:title="Estimations"
+        android:icon="@drawable/ic_insert_chart_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Accounts_Budgets"
+        android:title="Budgets"
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Accounts_Quotations"
+        android:title="Quotations"
+        android:icon="@drawable/ic_format_quote_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Accounts_PurchaseOrders"
+        android:title="Purchase Orders"
+        android:icon="@drawable/ic_shopping_basket_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Accounts_Invoices"
+        android:title="Invoices"
+        android:icon="@drawable/ic_insert_drive_file_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Accounts_Reports"
+        android:title="Reports"
+        android:icon="@drawable/ic_assessment_black_24dp"
+        app:showAsAction="never" />
+
+</menu>

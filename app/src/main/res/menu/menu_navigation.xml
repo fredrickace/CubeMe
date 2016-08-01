@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Calendar"
+        android:id="@+id/nav_calendar"
+        android:icon="@drawable/ic_date_range_black_24dp"/>
+    <item android:title="Accounts"
+        android:id="@+id/nav_accounts"
+        android:icon="@drawable/ic_account_box_black_24dp"/>
+    <item android:title="Contacts"
+        android:id="@+id/nav_contacts"
+        android:icon="@drawable/ic_contacts_black_24dp"/>
+    <item android:title="Inquiry"
+        android:id="@+id/nav_inquiry"
+        android:icon="@drawable/ic_new_releases_black_24dp"/>
+    <item android:title="Estimations"
+        android:id="@+id/nav_estimation"
+        android:icon="@drawable/ic_assessment_black_24dp"/>
+    <item android:title="Budgets"
+        android:id="@+id/nav_budgets"
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"/>
+    <item android:title="Quotations"
+        android:id="@+id/nav_quotations"
+        android:icon="@drawable/ic_format_quote_black_24dp"/>
+    <item  android:title="Purchase Orders"
+        android:id="@+id/nav_purchaseorders"
+        android:icon="@drawable/ic_shopping_basket_black_24dp"/>
+    <item android:title="Jobs"
+        android:id="@+id/nav_jobs"
+        android:icon="@drawable/ic_date_range_black_24dp"/>
+    <item android:title="Invoices"
+        android:id="@+id/nav_invoices"
+        android:icon="@drawable/ic_insert_drive_file_black_24dp"/>
+    <item android:title="Reports"
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/ic_assessment_black_24dp"/>
+</menu>

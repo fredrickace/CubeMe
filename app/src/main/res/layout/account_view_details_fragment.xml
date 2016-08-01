@@ -1,0 +1,285 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cube_me.cubeme.Accounts.AccountViewDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/layoutBackGround"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="@dimen/accountViewDetail_linearLayoutElevtion"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/accountView_detailGroupAccountsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/accountViewDetail_groupTV_height"
+                android:background="@color/groupBackground"
+                android:gravity="start|center"
+                android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+                android:text="Accounts Information"
+                android:textColor="@color/mainText"
+                android:textSize="@dimen/accountViewDetail_groupTextSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="Name"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountView_detailsAccountName_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/accountViewDetail_mainTV_leftPadding"
+                        android:text="Cube ME"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/accountView_detailsAccountName"
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="Parent Company"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountView_detailsCompanyName_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Athab Qatar"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/accountViewDetail_TV_height"
+                    android:gravity="start|center"
+                    android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+                    android:text="Address"
+                    android:textColor="@color/secondaryGroupText"
+                    android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="Street"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountViewDetail_streetTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="10"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="Building No"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountViewDetail_buildingNoTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="581"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="City"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountViewDetail_cityTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Al Aziziya"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="State"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountViewDetail_stateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Doha"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="PO Box"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountViewDetail_POBoxTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="3050"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="Pin Code"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountViewDetail_pincodeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="641011"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/accountViewDetail_secondaryTV_width"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/account_TV_rightPadding"
+                        android:text="Country"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+                    <TextView
+                        android:id="@+id/accountViewDetail_countryTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/accountViewDetail_TV_height"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Qatar"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/accountViewDetail_TV_mainText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

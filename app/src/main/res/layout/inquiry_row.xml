@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/inquiryRow_inquiryNoTV"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Inquiry Number"
+            android:textSize="@dimen/account_secondaryTextSize"
+            android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/mainText"/>
+
+
+        <TextView
+            android:id="@+id/inquiryRow_inquirySubjectTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:text="Subject"
+            android:textSize="@dimen/account_mainTextSize"
+            android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/mainText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/inquiryRow_companyNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|top"
+            android:text="Company Name"
+            android:textSize="12sp"
+            android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/mainText"/>
+
+        <TextView
+            android:id="@+id/inquiryRow_inquiryAssignedToTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|top"
+            android:text="AssignedTo"
+            android:textSize="12sp"
+            android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/mainText"/>
+
+
+        <TextView
+            android:id="@+id/inquiryRow_inquiryStatusTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|top"
+            android:text="Status"
+            android:textSize="12sp"
+            android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

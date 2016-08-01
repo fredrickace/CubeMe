@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#FF5252</color>
+    <color name="colorAccentOption">#FF5722</color>
+    <color name="colorText">#EEF5DB</color>
+    <color name="navHeader">#EFA00B</color>
+    <color name="navHeaderText">#FFF1D0</color>
+    <color name="normalDays">#757780</color>
+    <color name="selectedDays">#FFC53A</color>
+    <color name="disabledDays">#D2CCA1</color>
+    <color name="mainText">#020122</color>
+    <color name="divider">#D2CCA1</color>
+    <color name="textViewLeft">#9999A1</color>
+    <color name="textViewBackGround">#EDF2F4</color>
+    <color name="rippleBackGround">#757780</color>
+    <color name="contactCardBackGround">#E8EBF7</color>
+    <color name="secondaryText">#2B2D42</color>
+    <color name="ghostWhite">#FBFBFF</color>
+    <color name="whiteBaby">#FFFDF7</color>
+    <color name="ivory">#FFFFF2</color>
+    <color name="whiteAntiFlash">#EDF2F4</color>
+    <color name="groupBackground">#EDEDF4</color>
+    <color name="editTextStroke">#EDF2F4</color>
+    <color name="editTextActivated">#EFA00B</color>
+    <color name="layoutBackGround">#FBFBFF</color>
+    <color name="secondaryGroupText">#757780</color>
+    <color name="statusOkay">#119822</color>
+</resources>
