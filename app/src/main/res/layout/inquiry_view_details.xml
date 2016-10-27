@@ -1,0 +1,457 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cube_me.cubeme.Inquiry.InquiryViewDetailsFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/inquiryView_infoTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/account_viewHeight"
+                    android:background="@color/groupBackground"
+                    android:gravity="fill_vertical"
+                    android:paddingLeft="@dimen/account_groupTextLeftPadding"
+                    android:text="Inquiry Information"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/account_groupTextSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Company"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_companyTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Assigned to"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_assignTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Status"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_statusTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inquiryNew_viewHeight"
+                    android:background="@color/textViewBackGround"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:text="Subject"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                <TextView
+                    android:id="@+id/inquiryView_subjectTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inquiryNew_viewHeight"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/inquiryNew_mainTextSize" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inquiryNew_viewHeight"
+                    android:background="@color/textViewBackGround"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:text="Description"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                <TextView
+                    android:id="@+id/inquiryView_descriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|fill_vertical"
+                    android:padding="30dp"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/inquiryNew_mainTextSize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/textViewBackGround" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Department"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_departmentTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Project Type"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_projectTypeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Consultant"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_consultantTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Main Contractor"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_mainContractorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Sub Contractor"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_subContractorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize" />
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/inquiryNew_viewHeight"
+                    android:background="@color/textViewBackGround"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:text="Contact Details"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                <TextView
+                    android:id="@+id/inquiryView_contactPersonTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                <TextView
+                    android:id="@+id/inquiryView_contactDesignationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+
+                <TextView
+                    android:id="@+id/inquiryView_contactNumberTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="phone"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:text="+97412345678"
+                    android:textColorLink="@color/phoneNumber"
+                    android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+
+                <TextView
+                    android:id="@+id/inquiryView_emailTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="email"
+                    android:gravity="start|fill_vertical"
+                    android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                    android:text="Email"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/inquiryNew_secondaryTextSize"
+                    android:textStyle="italic" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Created Date"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_createdDateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize"  />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Created Time"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_createdTimeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize"  />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Last Edited Date"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_editDateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Last Edited  time"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiryView_editTimeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</FrameLayout>

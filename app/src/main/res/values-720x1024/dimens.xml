@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <dimen name="floatMarginTop">430dp</dimen>
-    <dimen name="floatMarginLeft">280dp</dimen>
-
-</resources>

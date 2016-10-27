@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Estimation.Estimation">
+
+
+    <item
+        android:id="@+id/action_EstimationNew_save"
+        android:icon="@drawable/ic_save_white_24dp"
+        android:title="Save"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/action_EstimationNew_download"
+        android:icon="@drawable/ic_file_download_white_24dp"
+        android:title="Download"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/action_EstimationNew_jobEdit"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:title="Edit/Remove Job"
+        app:showAsAction="never|withText" />
+
+
+
+
+
+</menu>

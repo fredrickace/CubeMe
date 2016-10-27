@@ -3,6 +3,7 @@
     <color name="colorPrimary">#F44336</color>
     <color name="colorPrimaryDark">#D32F2F</color>
     <color name="colorAccent">#FF5252</color>
+    <color name="colorAccentTransparent">#c2ff5252</color>
     <color name="colorAccentOption">#FF5722</color>
     <color name="colorText">#EEF5DB</color>
     <color name="navHeader">#EFA00B</color>
@@ -18,7 +19,7 @@
     <color name="contactCardBackGround">#E8EBF7</color>
     <color name="secondaryText">#2B2D42</color>
     <color name="ghostWhite">#FBFBFF</color>
-    <color name="whiteBaby">#FFFDF7</color>
+    <color name="white">#FFFFFF</color>
     <color name="ivory">#FFFFF2</color>
     <color name="whiteAntiFlash">#EDF2F4</color>
     <color name="groupBackground">#EDEDF4</color>
@@ -27,4 +28,20 @@
     <color name="layoutBackGround">#FBFBFF</color>
     <color name="secondaryGroupText">#757780</color>
     <color name="statusOkay">#119822</color>
+    <color name="imageButtonTint">#aeaeaf</color>
+    <color name="recyclerViewBG">#319999a1</color>
+
+    <color name="previewBreak">#00CC66</color>
+    <color name="previewTitles">#052F5F</color>
+    <color name="previewGroup">#ED7D3A</color>
+    <color name="deviceBackground">#f7f7f7</color>
+
+    <color name="quotationHeaderBG">#86757780</color>
+    <color name="cardViewBG">#14ed8383</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="phoneNumber">#7189FF</color>
+
+    <color name="hintText">#757780</color>
+    <color name="reportBG">#11757780</color>
+
 </resources>

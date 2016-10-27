@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--FAB-->
+    <dimen name="floatMarginTop">630dp</dimen>
+    <dimen name="floatMarginLeft">400dp</dimen>
+    <dimen name="floatMarginTopSecond">580dp</dimen>
+    <dimen name="calendar_AddEventFAB_marginLeft">400dp</dimen>
+</resources>

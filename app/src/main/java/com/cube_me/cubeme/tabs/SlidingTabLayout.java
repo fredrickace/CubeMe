@@ -75,9 +75,9 @@ public class SlidingTabLayout extends HorizontalScrollView {
     public SlidingTabLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
-        // Disable the Scroll Bar
+        // DISABLE THE SCROLL BAR
         setHorizontalScrollBarEnabled(false);
-        // Make sure that the Tab Strips fills this View
+        // MAKE SURE THAT THE TAB STRIPS FILLS THIS VIEW
         setFillViewport(true);
 
         mTitleOffset = (int) (TITLE_OFFSET_DIPS * getResources().getDisplayMetrics().density);

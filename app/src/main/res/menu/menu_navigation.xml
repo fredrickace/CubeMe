@@ -16,9 +16,6 @@
     <item android:title="Estimations"
         android:id="@+id/nav_estimation"
         android:icon="@drawable/ic_assessment_black_24dp"/>
-    <item android:title="Budgets"
-        android:id="@+id/nav_budgets"
-        android:icon="@drawable/ic_account_balance_wallet_black_24dp"/>
     <item android:title="Quotations"
         android:id="@+id/nav_quotations"
         android:icon="@drawable/ic_format_quote_black_24dp"/>
@@ -28,10 +25,19 @@
     <item android:title="Jobs"
         android:id="@+id/nav_jobs"
         android:icon="@drawable/ic_date_range_black_24dp"/>
-    <item android:title="Invoices"
-        android:id="@+id/nav_invoices"
-        android:icon="@drawable/ic_insert_drive_file_black_24dp"/>
+    <!--<item android:title="Invoices"-->
+        <!--android:id="@+id/nav_invoices"-->
+        <!--android:icon="@drawable/ic_insert_drive_file_black_24dp"/>-->
     <item android:title="Reports"
         android:id="@+id/nav_reports"
         android:icon="@drawable/ic_assessment_black_24dp"/>
+
+    <group
+        android:id="@+id/navGroup_signOut">
+        <item android:title="SignOut"
+            android:id="@+id/nav_signOut"
+            android:icon="@drawable/ic_highlight_off_black_24dp"/>
+    </group>
+
+
 </menu>

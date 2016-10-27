@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/consumableRow_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Name"
+            android:textSize="@dimen/account_mainTextSize"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/mainText"/>
+        <TextView
+            android:id="@+id/consumableRow_UOM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/account_mainTextSize"
+            android:textColor="@color/mainText"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="UOM"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/consumableRow_noOfUnits"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:text="No of Units"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/account_mainTextSize"
+            android:textColor="@color/secondaryText"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/consumableRow_budgetPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/account_mainTextSize"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/secondaryText"
+            android:text="Budget"/>
+
+        <TextView
+            android:id="@+id/consumableRow_unitPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/account_mainTextSize"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/secondaryText"
+            android:text="Unit Price"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/consumableRow_jobName"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:text="Job Name"
+            android:textColor="@color/navHeader"
+            android:textSize="@dimen/account_secondaryTextSize"
+            android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/consumableRow_totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_gravity="center"
+        android:textSize="@dimen/account_secondaryTextSize"
+        android:textColor="@color/mainText"
+        android:text="Total Price"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"/>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_EstimationView_Edit"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:title="Edit"
+        app:showAsAction="always|withText" />
+
+
+    <item
+        android:id="@+id/action_EstimationView_convertQuotation"
+        android:icon="@drawable/ic_format_quote_white_24dp"
+        android:title="Convert Quotation"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/action_EstimationView_download"
+        android:icon="@drawable/ic_file_download_white_24dp"
+        android:title="Download"
+        app:showAsAction="always|withText" />
+</menu>

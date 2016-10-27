@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_jobName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Job Name"
+        android:textColor="@color/navHeader"
+        android:textSize="@dimen/account_secondaryTextSize"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Name"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/estimationView_headingTextSize" />
+
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_UOM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:text="UOM"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/estimationView_headingTextSize" />
+
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_noOfUnits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:text="Units"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/estimationView_headingTextSize" />
+
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_noOfResources"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="Hours"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/estimationView_headingTextSize" />
+
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_BudgetPerUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="Budget"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/estimationView_headingTextSize" />
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_pricePerUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="Price/Unit"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+    <TextView
+        android:id="@+id/otherMaterialPreviewRow_totalPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="Total Price"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+</LinearLayout>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/jobRow_TotalLabelTV"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Grand Total"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/account_groupTextSize" />
+
+    <TextView
+        android:id="@+id/jobRow_TotalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="0"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/account_groupTextSize" />
+
+    <TextView
+        android:id="@+id/jobRow_denominationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="QR"
+        android:textColor="@color/mainText"
+        android:textSize="@dimen/account_groupTextSize" />
+</LinearLayout>

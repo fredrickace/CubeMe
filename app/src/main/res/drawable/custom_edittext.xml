@@ -7,6 +7,4 @@
         android:color="@color/editTextStroke"
         android:dashWidth="1dp"/>
 
-
-
 </shape>

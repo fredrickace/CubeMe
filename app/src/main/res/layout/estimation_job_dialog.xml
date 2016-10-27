@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme"
+    tools:context="com.cube_me.cubeme.Estimation.EstimationJobDialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navHeader"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="50dp"
+            android:background="@color/navHeader"
+            android:gravity="center"
+            android:text="New Job"
+            android:textStyle="bold"
+            android:textSize="@dimen/account_mainTextSize" />
+
+        <ImageButton
+            android:id="@+id/jobDialog_cancelImageButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center"
+            android:background="@color/navHeader"
+            android:src="@drawable/ic_close_white_24dp"
+            android:textColor="@color/ivory"
+            android:textSize="@dimen/account_mainTextSize" />
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/jobDialog_jobName"
+            style="@style/EditTextTheme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_edittext_1"
+            android:gravity="center"
+            android:hint="Job Name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/jobDialog_jobUnit"
+            style="@style/EditTextTheme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_edittext_1"
+            android:gravity="center"
+            android:hint="Measuring Unit"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/jobDialog_jobQuantity"
+            style="@style/EditTextTheme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_edittext_1"
+            android:gravity="center"
+            android:hint="Quantity"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/jobDialog_addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="Add Job"
+            android:textColor="@color/ivory"
+            android:textSize="@dimen/account_mainTextSize" />
+
+
+</LinearLayout>

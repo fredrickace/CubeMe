@@ -1,5 +1,6 @@
 package com.cube_me.cubeme.Contacts;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -29,12 +30,14 @@ public class ContactNew extends AppCompatActivity {
     EditText contactEmailEditText;
     TextView contactFirstNameTV;
     TextView contactTypeContactTV;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contact_new_activity);
 
+        i = getIntent();
 //        Initialize Toolbar
         toolBar = (Toolbar)findViewById(R.id.app_toolbar);
         setSupportActionBar(toolBar);
@@ -90,8 +93,9 @@ public class ContactNew extends AppCompatActivity {
         newContact.setName(contactNameEditText.getText().toString());
         newContact.setEmail(emailEditText.getText().toString());
         newContact.setCompanyName(contactAccountName.getText().toString());
-        ContactsRecyclerAdapter.addNewContact(newContact);
-        onBackPressed();
+        i.putExtra("NewContact",newContact);
+        setResult(ContactsFragment.RETURN_TRUE,i);
+        finish();
     }
 
     @Override
@@ -105,6 +109,15 @@ public class ContactNew extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        setResult(ContactsFragment.RETURN_FALSE);
+        finish();
+        super.onBackPressed();
+
     }
 
     private void initContactNameAutoFill(){

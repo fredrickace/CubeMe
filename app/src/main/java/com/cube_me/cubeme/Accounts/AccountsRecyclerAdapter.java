@@ -5,33 +5,41 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cube_me.cubeme.R;
 
+import org.apache.poi.sl.usermodel.Line;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Fredrick on 14-Jul-16.
  */
 
-public class AccountsRecyclerAdapter extends RecyclerView.Adapter<AccountsRecyclerAdapter.AccountsViewHolder> {
+public class AccountsRecyclerAdapter extends RecyclerView.Adapter<AccountsRecyclerAdapter.AccountsViewHolder>{
 
     private LayoutInflater inflater;
     static List<Accounts> data;
+    Context context;
 
     public AccountsRecyclerAdapter(Context context, List<Accounts> data) {
 
         inflater = LayoutInflater.from(context);
+        this.context = context;
         this.data = data;
     }
 
     @Override
     public AccountsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = inflater.inflate(R.layout.accounts_row,parent,false);
+        View view = inflater.inflate(R.layout.accounts_recycler_row,parent,false);
         AccountsViewHolder accountsViewHolder = new AccountsViewHolder(view);
 
         return accountsViewHolder;
@@ -39,21 +47,13 @@ public class AccountsRecyclerAdapter extends RecyclerView.Adapter<AccountsRecycl
 
     @Override
     public void onBindViewHolder(AccountsViewHolder holder, final int position) {
+        if(position%2 == 0){
+            holder.layout.setBackgroundColor(holder.itemView.getResources().getColor(R.color.recyclerViewBG));
+        }
         Accounts current = data.get(position);
-        holder.accountsNameTextView.setText(current.getAccountName());
-        holder.accountsContactNameTextView.setText(current.getAccountContactName());
-        holder.imageView.setImageResource(R.drawable.ic_delete_black_24dp);
-        holder.imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                    Toast.makeText(v.getContext(), "Deleted", Toast.LENGTH_SHORT).show();
+        holder.accountsNameTextView.setText(current.accountName);
+        holder.accountsContactNameTextView.setText(current.accountContactName);
 
-                data.remove(position);
-//                notifyDataSetChanged();
-                    notifyItemRemoved(position);
-                    notifyItemRangeChanged(position,getItemCount());
-            }
-        });
 
     }
 
@@ -62,30 +62,23 @@ public class AccountsRecyclerAdapter extends RecyclerView.Adapter<AccountsRecycl
         return data.size();
     }
 
+
+
     public class AccountsViewHolder extends RecyclerView.ViewHolder {
 
         TextView accountsNameTextView;
         TextView accountsContactNameTextView;
         ImageView imageView;
+        LinearLayout layout;
 
         public AccountsViewHolder(View itemView) {
             super(itemView);
+            layout = (LinearLayout) itemView.findViewById(R.id.accountViewRow_layout);
             accountsNameTextView = (TextView) itemView.findViewById(R.id.textView_accountName);
-            accountsNameTextView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(v.getContext(), accountsNameTextView.getText(), Toast.LENGTH_SHORT).show();
-                }
-            });
             accountsContactNameTextView = (TextView) itemView.findViewById(R.id.textView_contactName);
-            imageView = (ImageView) itemView.findViewById(R.id.deleteImageView);
 
 
         }
     }
-    public static void addNewAccounts(Accounts newObject){
-        data.add(newObject);
-        AccountsFragment.accountsAdapter.notifyDataSetChanged();
 
-    }
 }

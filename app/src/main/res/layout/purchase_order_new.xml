@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/purchase_order_new"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.cube_me.cubeme.PurchaseOrder.PurchaseOrderNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/poNew_poNoTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/po_ViewHeight"
+                    android:background="@color/groupBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/po_LeftPadding"
+                    android:text="PO Number"
+                    android:textColor="@color/secondaryText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/po_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/po_LeftPadding"
+                        android:paddingRight="@dimen/po_RightPadding"
+                        android:text="Client"
+                        android:textColor="@color/secondaryText" />
+
+                    <TextView
+                        android:id="@+id/poNew_ClientNameTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/po_ViewHeight"
+                        android:layout_weight="4"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/po_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/po_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/po_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/po_LeftPadding"
+                        android:paddingRight="@dimen/po_RightPadding"
+                        android:text="Title"
+                        android:textColor="@color/secondaryText" />
+
+                    <EditText
+                        android:id="@+id/poNew_POTitleET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/po_ViewHeight"
+                        android:layout_weight="4"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="@dimen/po_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/po_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/po_ViewHeight"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/po_LeftPadding"
+                    android:text="Description"
+                    android:textColor="@color/secondaryText" />
+
+                <EditText
+                    android:id="@+id/poNew_descET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="start"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minHeight="80dp"
+                    android:padding="@dimen/po_LeftPadding"
+                    android:textSize="@dimen/po_MainText"
+                    android:theme="@style/EditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/poNew_attachmentRecycler"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"/>
+                    <Button
+                        android:id="@+id/poNew_addAttachementsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/po_RightPadding"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorAccent"
+                        android:padding="5dp"
+                        android:text="Attach Docs"/>
+                </LinearLayout>
+
+
+                <!--PO CREATE,EDIT - DATE & TIME SECTION-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/groupBackground"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Created Date:"
+                            android:textColor="@color/mainText" />
+
+                        <TextView
+                            android:id="@+id/poNew_CreateDateTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Created Date:"
+                            android:textColor="@color/mainText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Created Time:"
+                            android:textColor="@color/mainText" />
+
+                        <TextView
+                            android:id="@+id/poNew_CreateTimeTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Created Date:"
+                            android:textColor="@color/mainText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Last Edited Date:"
+                            android:textColor="@color/mainText" />
+
+                        <TextView
+                            android:id="@+id/poNew_EditDateTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Created Date:"
+                            android:textColor="@color/mainText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Last Edited time:"
+                            android:textColor="@color/mainText" />
+
+                        <TextView
+                            android:id="@+id/poNew_EditTimeTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Created Date:"
+                            android:textColor="@color/mainText" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorAccent"
+                    android:text="Create PO"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

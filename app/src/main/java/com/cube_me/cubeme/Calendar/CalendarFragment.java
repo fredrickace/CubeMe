@@ -1,40 +1,48 @@
 package com.cube_me.cubeme.Calendar;
 
 
+import android.app.DatePickerDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.cube_me.cubeme.BaseActivity;
+import com.cube_me.cubeme.ClickListener;
+import com.cube_me.cubeme.DatePickerFragment;
 import com.cube_me.cubeme.R;
-import com.imanoweb.calendarview.CalendarListener;
-import com.imanoweb.calendarview.CustomCalendarView;
+import com.cube_me.cubeme.RecyclerTouchListener;
+import com.cube_me.cubeme.SimpleDividerItemDecoration;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CalendarFragment extends Fragment {
+public class CalendarFragment extends Fragment implements View.OnClickListener{
 
-    protected CustomCalendarView customCalendarView;
-    protected FloatingActionButton fab;
-    protected Calendar currentCalendar;
+    FloatingActionButton datePickFAB;
+    FloatingActionButton newEventFAB;
+    RecyclerView calendarEventRecyclerView;
+    CalendarEventRecyclerAdapter calendarEventRecyclerAdapter;
+    Context context;
+    List<CalendarEvent> calendarEventsList;
 
     public CalendarFragment() {
-        // Required empty public constructor
+        // REQUIRED EMPTY PUBLIC CONSTRUCTOR
     }
 
     @Override
@@ -48,46 +56,87 @@ public class CalendarFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         final View rootView = inflater.inflate(R.layout.calendar_fragment, container, false);
+
+        // BASIC INIT
+        context = getContext();
         BaseActivity.appToolbar.setTitle("Calendar");
+        calendarEventsList = new ArrayList<>();
 
+        datePickFAB = (FloatingActionButton) rootView.findViewById(R.id.calendarFragment_pickDate);
+        newEventFAB = (FloatingActionButton) rootView.findViewById(R.id.calendarFragment_addEvent);
+        datePickFAB.setOnClickListener(this);
+        newEventFAB.setOnClickListener(this);
 
-        fab = (FloatingActionButton) rootView.findViewById(R.id.floatingActionButton);
-        fab.setOnClickListener(new View.OnClickListener() {
+        //SETTING UP THE RECYCLER VIEW
+        calendarEventRecyclerView = (RecyclerView) rootView.findViewById(R.id.calendarFragment_recycler);
+        calendarEventRecyclerAdapter = new CalendarEventRecyclerAdapter(calendarEventsList,context);
+        calendarEventRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+        calendarEventRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(context, calendarEventRecyclerView, new ClickListener() {
             @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Yet to Be Configured", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            }
-        });
+            public void onClick(View view, int position) {
 
-//         Initialize CustomCalendar
-
-        customCalendarView = (CustomCalendarView) rootView.findViewById(R.id.customCalendarView);
-        currentCalendar = Calendar.getInstance(Locale.getDefault());
-//        customCalendarView.setFirstDayOfWeek(Calendar.SUNDAY);
-        customCalendarView.setShowOverflowDate(false);
-        customCalendarView.refreshCalendar(currentCalendar);
-        customCalendarView.setCalendarListener(new CalendarListener() {
-            @Override
-            public void onDateSelected(Date date) {
-                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-                Toast.makeText(rootView.getContext(), df.format(date), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onMonthChanged(Date date) {
-                SimpleDateFormat df = new SimpleDateFormat("MMM-yyyy");
-                Toast.makeText(rootView.getContext(), df.format(date), Toast.LENGTH_SHORT).show();
+            public void onLongClick(View view, int position) {
 
             }
-        });
-        // Inflate the layout for this fragment
+        }));
+        calendarEventRecyclerView.setAdapter(calendarEventRecyclerAdapter);
+        //END OF RECYCLER VIEW SECTION
+
         return rootView;
 
     }
+
+    private void showDatePicker() {
+
+        DatePickerDialog.OnDateSetListener onDate = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+                Toast.makeText(getContext(), ""+i, Toast.LENGTH_SHORT).show();
+            }
+        };
+        DatePickerFragment datePickerFragment = new DatePickerFragment();
+        datePickerFragment.setCallBack(onDate);
+        datePickerFragment.show(getFragmentManager(),"Date Picker");
+
+
+    }
+
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_main, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.calendarFragment_addEvent:
+
+                CalendarCreateEventDialog.CalendarEventCommunicator communicator = new CalendarCreateEventDialog.CalendarEventCommunicator() {
+                    @Override
+                    public void addNewCalendarEvent(CalendarEvent calendarEvent) {
+                        calendarEventsList.add(calendarEvent);
+                        calendarEventRecyclerAdapter.notifyDataSetChanged();
+                    }
+                };
+                CalendarCreateEventDialog newDialog = new CalendarCreateEventDialog();
+                newDialog.setCallBack(communicator);
+                newDialog.setStyle(DialogFragment.STYLE_NORMAL,R.style.CustomDialog);
+                newDialog.show(getFragmentManager(),"Add Event");
+                break;
+
+            case R.id.calendarFragment_pickDate:
+
+                showDatePicker();
+                break;
+        }
+
+    }
+
+
 }

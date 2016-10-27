@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Estimation.EstimationPreview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:elevation="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center|right"
+                        android:paddingRight="10dp"
+                        android:text="Plot No :# 169,\nCube Middle East,\nAl Aziziya Next to Civil deference office,\nDoha,Qatar.\nEmail : info@cube-me.com\nTel: +974 - 4464 7195\nFax: +974 – 44678840"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/previewBreak" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layoutDirection="rtl">
+
+                    <TextView
+                        android:id="@+id/estPreview_clientAccountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ClientName"
+                        android:paddingRight="5dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="5dp"
+                        android:text="ClientName:"
+                        android:textColor="@color/mainText" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/estPreview_DirectMaterialsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewGroup"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Direct Materials"
+                        android:textColor="@color/ivory"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewTitles"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/directMaterialPreviewRow_jobName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Job"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:id="@+id/directMaterialRow_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Name"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Dimension"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="No of Units"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Budget"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Unit Price"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|fill_vertical"
+                            android:text="Total Price"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/estPreview_DirectMaterialsRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/estPreview_DirectMaterialTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingRight="@dimen/textView_RightPadding"
+                        android:text="SubTotal"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/estPreview_manPowerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewGroup"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Man Power"
+                        android:textColor="@color/ivory"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewTitles"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Job"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/account_secondaryTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Name"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="UOM"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Units"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="No Of Res"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Budget"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Price/Unit"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Total Price"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/estPreview_manPowerRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/estPreview_manPowerTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingRight="@dimen/textView_RightPadding"
+                        android:text="SubTotal"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/estPreview_toolsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewGroup"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Tools"
+                        android:textColor="@color/ivory"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewTitles"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Job"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/account_secondaryTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Name"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="UOM"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Units"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="No of Res"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Budget"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Price/Unit"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Total Price"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/estPreview_toolsRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/estPreview_toolsTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingRight="@dimen/textView_RightPadding"
+                        android:text="SubTotal"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/estPreview_transportLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewGroup"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Transport"
+                        android:textColor="@color/ivory"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewTitles"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Job"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/account_secondaryTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Name"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="UOM"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Units"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="No of Res"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Budget"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Price/Unit"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Total Price"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/estPreview_transportRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/estPreview_transportTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingRight="@dimen/textView_RightPadding"
+                        android:text="SubTotal"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/estPreview_consumablesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewGroup"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Consumables"
+                        android:textColor="@color/ivory"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/previewTitles"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Job"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Name"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="UOM"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="No.Of Units"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Budget"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Unit Price"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Total Price"
+                            android:textColor="@color/ivory"
+                            android:textSize="@dimen/estimationView_headingTextSize" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/estPreview_consumablesRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/estPreview_consumablesTotalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:paddingRight="@dimen/textView_RightPadding"
+                        android:text="SubTotal"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/estimationView_subGroupTextSize"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/groupBackground"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="OverHead %: "
+                            android:textColor="@color/mainText"
+                            android:textSize="@dimen/estimationView_subGroupTextSize" />
+
+                        <TextView
+                            android:id="@+id/estPreview_overHeadPercent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="Margin %: "
+                            android:textColor="@color/mainText"
+                            android:textSize="@dimen/estimationView_subGroupTextSize" />
+
+                        <TextView
+                            android:id="@+id/estPreview_marginPercent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/estPreview_jobTotalContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:paddingLeft="10dp"
+                            android:text="Grand Total:"
+                            android:textColor="@color/mainText"
+                            android:textSize="@dimen/estimationView_subGroupTextSize" />
+
+                        <TextView
+                            android:id="@+id/estPreview_grandTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Created Date"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/estPreview_createdDateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Created Time"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/estPreview_createdTimeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Last Edited Date"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/estPreview_editDateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="@dimen/inquiryNew_TV_viewWidth"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Last Edited  time"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/estPreview_editTimeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+                </LinearLayout>
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

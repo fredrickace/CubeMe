@@ -14,11 +14,11 @@ public class AccountsViewPagerAdapter extends FragmentPagerAdapter {
 
 
     Context context;
-    String[] tabstitle;
+    String[] tabsTitle;
     public AccountsViewPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
-        tabstitle = context.getResources().getStringArray(R.array.tabTitle_Account);
+        tabsTitle = context.getResources().getStringArray(R.array.tabTitle_Account);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class AccountsViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
 
-        return tabstitle[position];
+        return tabsTitle[position];
     }
 
     @Override

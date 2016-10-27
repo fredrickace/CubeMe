@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.cube_me.cubeme.Quotations.QuotationNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:id="@+id/quotationNew_estIDTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start|center"
+            android:padding="@dimen/quo_LeftPadding"
+            android:text="QuotationId"
+            android:textColor="@color/colorAccentOption"
+            android:textStyle="bold" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--QUOTATION CLIENT NAME SECTION-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/quo_ETViewHeight"
+                        android:layout_weight="2"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="@dimen/quo_RightPadding"
+                        android:text="Client"
+                        android:textColor="@color/secondaryText" />
+
+                    <TextView
+                        android:id="@+id/quotationNew_clientNameTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/quo_ETViewHeight"
+                        android:layout_weight="5"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/quo_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/quo_MainText" />
+                </LinearLayout>
+
+                <!--QUOTATION TITLE SECTION-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/quo_ETViewHeight"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/quo_RightPadding"
+                        android:text="Title"
+                        android:textColor="@color/secondaryText" />
+
+                    <EditText
+                        android:id="@+id/quotationNew_titleET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/quo_ETViewHeight"
+                        android:layout_weight="5"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/quo_LeftPadding"
+                        android:textSize="@dimen/quo_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <!--QUOTATION STATUS SECTION-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/quo_RightPadding"
+                        android:text="Status"
+                        android:textColor="@color/secondaryText" />
+
+                    <Spinner
+                        android:id="@+id/quotationNew_statusSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/quo_ETViewHeight"
+                        android:layout_weight="5"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="@dimen/quo_LeftPadding"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <!--QUOTATION TABLE TITLES LINEAR LAYOUT-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/quotationHeaderBG"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Job Name"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Unit"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Quantity"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Unit Price"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Total"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/quotationNew_jobsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!--QUOTATION TOTAL LL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/quotationNew_totalTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/mainText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="center|right"
+                        android:text="Total"
+                        android:textColor="@color/mainText"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--QUOTATION PERCENTAGE LL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <Switch
+                        android:id="@+id/quotationNew_percentageSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:gravity="center|left"
+                        android:showText="true"
+                        android:textOff="%"
+                        android:textOn="%" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center|right"
+                        android:text="Discount"
+                        android:textColor="@color/mainText"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/quotationNew_discountET"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textColor="@color/mainText"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <!--QUOTATION TOTAL LL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layoutDirection="rtl"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/quotationNew_grossTotalTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/mainText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="center|right"
+                        android:text="Gross Total"
+                        android:textColor="@color/mainText"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--QUOTATION TERMS & CONDITIONS LL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/quotationHeaderBG"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/quo_LeftPadding"
+                        android:text="Terms \&amp; Conditions"
+                        android:textColor="@color/ivory" />
+
+                    <EditText
+                        android:id="@+id/quotationNew_termsET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="start"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minHeight="80dp"
+                        android:paddingLeft="@dimen/quo_LeftPadding"
+                        android:textSize="@dimen/quo_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

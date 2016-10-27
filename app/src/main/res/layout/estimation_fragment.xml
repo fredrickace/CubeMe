@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cube_me.cubeme.Estimation.EstimationFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/estimationFrag_noContentTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccentTransparent"
+        android:text="No Estimations" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/estimationFrag_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/estiamtionFrag_NewFAB"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/floatMarginLeft"-->
+        <!--android:layout_marginTop="@dimen/floatMarginTop"-->
+        <!--android:src="@drawable/ic_add_white_24dp"-->
+        <!--app:fabSize="normal"/>-->
+
+</FrameLayout>

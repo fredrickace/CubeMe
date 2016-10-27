@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="@color/transparent"
+    tools:context=".EditDeleteFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:foreground="@color/transparent">
+
+
+       <ImageButton
+           android:id="@+id/editDelete_view"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_visibility_white_24dp"
+           android:tint="@color/colorAccentTransparent" />
+
+       <ImageButton
+           android:id="@+id/editDelete_edit"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_mode_edit_white_24dp"
+           android:tint="@color/colorAccentTransparent" />
+
+       <ImageButton
+           android:id="@+id/editDelete_delete"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_delete_white_24dp"
+           android:tint="@color/colorAccentTransparent" />
+
+   </LinearLayout>
+
+
+</FrameLayout>

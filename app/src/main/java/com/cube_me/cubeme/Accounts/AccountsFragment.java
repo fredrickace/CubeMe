@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -34,9 +35,13 @@ public class AccountsFragment extends Fragment {
     RecyclerView recyclerView;
     static AccountsRecyclerAdapter accountsAdapter;
     FloatingActionButton fab;
+    List<Accounts> accountsList;
+    List<Accounts> filteredData;
+    public static final int RETURN_TRUE = 0;
+    public static final int RETURN_FALSE = 1;
 
     public AccountsFragment() {
-        // Required empty public constructor
+        // REQUIRED EMPTY PUBLIC CONSTRUCTOR
     }
 
     @Override
@@ -49,7 +54,7 @@ public class AccountsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // INFLATE THE LAYOUT FOR THIS FRAGMENT
         View viewRoot = inflater.inflate(R.layout.accounts_fragments, container, false);
         BaseActivity.appToolbar.setTitle("Accounts");
 
@@ -59,7 +64,13 @@ public class AccountsFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
+
+        accountsList = new ArrayList<>();
+        filteredData = new ArrayList<>();
         recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_accounts);
+
         accountsAdapter = new AccountsRecyclerAdapter(getContext(), getData());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -84,7 +95,8 @@ public class AccountsFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), AccountsNew.class));
+                Intent i = new Intent(getContext(),AccountsNew.class);
+                startActivityForResult(i,RETURN_TRUE);
             }
         });
 
@@ -96,6 +108,60 @@ public class AccountsFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.menu_accounts, menu);
     }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+        MenuItem menuItem = menu.findItem(R.id.action_Accounts_Search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                filteredData = getFilteredResults(query);
+                updateRecyclerView(filteredData);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+                filteredData = getFilteredResults(query);
+                updateRecyclerView(filteredData);
+                return true;
+            }
+        });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode == RETURN_TRUE){
+            Accounts newAccount = data.getParcelableExtra("NewAccount");
+            accountsList.add(newAccount);
+            updateRecyclerView(accountsList);
+        }
+    }
+
+    public void updateRecyclerView(List<Accounts> data){
+        accountsAdapter = new AccountsRecyclerAdapter(getContext(), data);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(accountsAdapter);
+
+    }
+
+    protected List<Accounts> getFilteredResults(String constraint) {
+        List<Accounts> results = new ArrayList<>();
+
+        for (Accounts item : accountsList) {
+            if (item.accountName.toLowerCase().contains(constraint) || item.accountContactName.toLowerCase().contains(constraint)) {
+                results.add(item);
+            }
+        }
+        return results;
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -112,9 +178,7 @@ public class AccountsFragment extends Fragment {
 
     }
 
-    public static List<Accounts> getData(){
-
-        List<Accounts> data = new ArrayList<>();
+    public List<Accounts> getData(){
 
         String[] accountName = {"Athab Qatar", "CubeME", "HBK", "Qatar Petroleum", "GCC", "SinoHydro","Woqood","Shell"};
         String[] accountsContactName = {"Raja","Prabhu","Jack","Mark","Fred","Suresh","Bharath","Julie"};
@@ -122,9 +186,9 @@ public class AccountsFragment extends Fragment {
             Accounts current = new Accounts();
             current.accountName = accountName[i];
             current.accountContactName = accountsContactName[i];
-            data.add(current);
+            accountsList.add(current);
         }
-        return data;
+        return accountsList;
     }
 
 }

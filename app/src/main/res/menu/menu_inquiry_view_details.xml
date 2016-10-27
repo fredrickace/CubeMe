@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_inquiryView_editInquiry"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:title="Save offline"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_inquiryView_newEstimation"
+        android:icon="@drawable/ic_insert_chart_white_24dp"
+        android:title="Save offline"
+        app:showAsAction="always" />
+
+
+</menu>

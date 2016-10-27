@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contactRow_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/contactDP_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/contactimage" />
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contactCompanyName_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="Account Name"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/contact_textSize" />
+
+        <TextView
+            android:id="@+id/contactName_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="Contact Name"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/contact_textSize" />
+
+        <TextView
+            android:id="@+id/contactEmail_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="EmailId"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/contact_textSize" />
+    </LinearLayout>
+
+
+</LinearLayout>

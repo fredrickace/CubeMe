@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/job_new"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.cube_me.cubeme.Jobs.JobNew">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            layout="@layout/app_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+                <TextView
+                    android:id="@+id/jobsNew_jobsNoTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/jobs_ViewHeight"
+                    android:background="@color/groupBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/jobs_LeftPadding"
+                    android:text="Job Number"
+                    android:textColor="@color/secondaryText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Client"
+                        android:textColor="@color/secondaryText" />
+
+                    <TextView
+                        android:id="@+id/jobsNew_ClientNameTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Title"
+                        android:textColor="@color/secondaryText" />
+
+                    <EditText
+                        android:id="@+id/jobsNew_jobsTitleET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Project Type"
+                        android:textColor="@color/secondaryText" />
+
+                    <Spinner
+                        android:id="@+id/jobsNew_jobsTypeSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Consultant"
+                        android:textColor="@color/secondaryText" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/jobsNew_jobsConsultantACTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Main Contractor"
+                        android:textColor="@color/secondaryText" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/jobsNew_jobsContractorACTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/jobs_subSectionViewHeight"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="@dimen/jobs_LeftPadding"
+                    android:paddingRight="@dimen/jobs_RightPadding"
+                    android:text="Project Manager"
+                    android:textColor="@color/secondaryGroupText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Name"
+                        android:textColor="@color/secondaryText" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/jobsNew_jobsPMNameACTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Contact Number"
+                        android:textColor="@color/secondaryText" />
+
+                    <EditText
+                        android:id="@+id/jobsNew_jobsPMContactCountryCodeET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight=".75"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:hint="+974"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+
+                    <EditText
+                        android:id="@+id/jobsNew_jobsPMContactNOET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="2.25"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Email"
+                        android:textColor="@color/secondaryText" />
+
+                    <EditText
+                        android:id="@+id/jobsNew_jobsPMEmailET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/jobs_subSectionViewHeight"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="@dimen/jobs_LeftPadding"
+                    android:paddingRight="@dimen/jobs_RightPadding"
+                    android:text="Procurement Manager"
+                    android:textColor="@color/secondaryGroupText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Name"
+                        android:textColor="@color/secondaryText" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/jobsNew_jobsProManagerNameACTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Contact Number"
+                        android:textColor="@color/secondaryText" />
+
+                    <EditText
+                        android:id="@+id/jobsNew_jobsProManagerContactCountryCodeET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight=".75"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:hint="+974"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+
+                    <EditText
+                        android:id="@+id/jobsNew_jobsProManagerContactNOET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="2.25"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:paddingRight="@dimen/jobs_RightPadding"
+                        android:text="Email"
+                        android:textColor="@color/secondaryText" />
+
+                    <EditText
+                        android:id="@+id/jobsNew_jobsProManagerEmailET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/jobs_ViewHeight"
+                        android:layout_weight="3"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/jobs_MainText"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/jobs_ViewHeight"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/jobs_LeftPadding"
+                    android:text="Description"
+                    android:textColor="@color/secondaryText" />
+
+                <EditText
+                    android:id="@+id/jobsNew_descET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="start"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minHeight="80dp"
+                    android:padding="@dimen/jobs_LeftPadding"
+                    android:textSize="@dimen/jobs_MainText"
+                    android:theme="@style/EditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/jobsNew_attachmentsRecycler"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"/>
+                    <Button
+                        android:id="@+id/jobsNew_addAttachementsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="@dimen/jobs_RightPadding"
+                        android:background="@color/colorAccent"
+                        android:padding="5dp"
+                        android:text="Attach Docs"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start Date"
+                        android:textColor="@color/secondaryText"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:layout_gravity="center"/>
+                    <ImageButton
+                        android:id="@+id/jobsNew_startDateImgButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_date_range_white_24dp"
+                        android:tint="@color/colorAccent"
+                        android:backgroundTint="@color/transparent"/>
+                    <TextView
+                        android:id="@+id/jobsNew_startDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DD/MM/YYYY"
+                        android:textColor="@color/secondaryText"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  End Date"
+                        android:textColor="@color/secondaryText"
+                        android:paddingLeft="@dimen/jobs_LeftPadding"
+                        android:layout_gravity="center"/>
+                    <ImageButton
+                        android:id="@+id/jobsNew_EndDateImgButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_date_range_white_24dp"
+                        android:tint="@color/colorAccent"
+                        android:backgroundTint="@color/transparent"/>
+                    <TextView
+                        android:id="@+id/jobsNew_EndDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DD/MM/YYYY"
+                        android:textColor="@color/secondaryText"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

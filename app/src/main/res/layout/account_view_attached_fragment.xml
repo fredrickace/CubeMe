@@ -12,23 +12,103 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/foldableGroupTVWidth"
+                        android:layout_height="@dimen/foldableGroupTVHeight"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+                        android:text="Inquiries"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/account_groupTextSize" />
+
+                    <ImageButton
+                        android:id="@+id/addImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/removeImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_remove_black_24dp"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/inquiryAttached_recycler"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/foldableGroupTVWidth"
+                        android:layout_height="@dimen/foldableGroupTVHeight"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+                        android:text="Jobs"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/account_groupTextSize" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_add_black_24dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_remove_black_24dp"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
 
 
     </LinearLayout>
-
-    <!--<ToggleButton-->
-        <!--android:layout_marginLeft="50dp"-->
-        <!--android:layout_width="25dp"-->
-        <!--android:layout_height="40dp"-->
-        <!--android:text=" "-->
-        <!--android:gravity="center"-->
-        <!--android:background="@color/ivory"-->
-        <!--android:textOff=">"-->
-        <!--android:textOn="^"-->
-        <!--android:textSize="35sp"-->
-        <!--android:textColor="@color/mainText"-->
-        <!--android:id="@+id/toggleButton" />-->
 
 
 </FrameLayout>

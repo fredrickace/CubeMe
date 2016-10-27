@@ -5,8 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.cube_me.cubeme.Accounts.AccountViewAttachedFragment;
 import com.cube_me.cubeme.R;
 
 import java.util.List;
@@ -33,19 +35,26 @@ public class InquiryRecyclerAdapter extends RecyclerView.Adapter<InquiryRecycler
     @Override
     public void onBindViewHolder(InquiryViewHolder holder, int position) {
 
+        if(position%2 == 0){
+            holder.layout.setBackgroundColor(holder.itemView.getResources().getColor(R.color.recyclerViewBG));
+        }
         Inquiry currentInquiry = data.get(position);
-        holder.inquiryNoTV.setText(currentInquiry.getInquiryNumber());
-        holder.inquirySubjectTV.setText(currentInquiry.getInquirySubject());
-        holder.inquiryCompanyTV.setText(currentInquiry.getInquiryCompanyName());
-        holder.inquiryStatusTV.setText(currentInquiry.getInquiryStatus());
-        if(currentInquiry.getInquiryStatus().equals("Estimation") || currentInquiry.getInquiryStatus().equals("Quotation Stage")){
+        holder.inquiryNoTV.setText(currentInquiry.inquiryID);
+        holder.inquirySubjectTV.setText(currentInquiry.inquirySubject);
+        holder.inquiryCompanyTV.setText(currentInquiry.inquiryCompanyName);
+        holder.inquiryStatusTV.setText(" "+currentInquiry.inquiryStatus);
+        if(currentInquiry.inquiryStatus.equals("Estimation") || currentInquiry.inquiryStatus.equals("Quotation Sent")){
             holder.inquiryStatusTV.setTextColor(holder.itemView.getResources().getColor(R.color.navHeader));
         }
-        if(currentInquiry.getInquiryStatus().equals("Approved")){
+        if(currentInquiry.inquiryStatus.equals("Approved")){
             holder.inquiryStatusTV.setTextColor(holder.itemView.getResources().getColor(R.color.statusOkay));
         }
-        holder.inquiryAssignedToTV.setText(currentInquiry.getInquiryAssignTo());
-
+        holder.inquiryAssignedToTV.setText(" "+currentInquiry.inquiryAssignTo);
+        holder.inquiryCreateDateTV.setText(currentInquiry.inquiryCreateDate);
+        holder.inquiryEditDateTV.setText(currentInquiry.inquiryLastEditDate);
+        holder.consultantTV.setText(currentInquiry.consultant);
+        holder.mainContractorTV.setText(currentInquiry.mainContractor);
+        holder.subContractorTV.setText(currentInquiry.subContractor);
 
     }
 
@@ -54,25 +63,33 @@ public class InquiryRecyclerAdapter extends RecyclerView.Adapter<InquiryRecycler
         return data.size();
     }
     public class InquiryViewHolder extends RecyclerView.ViewHolder{
+        LinearLayout layout;
         TextView inquiryNoTV;
         TextView inquirySubjectTV;
         TextView inquiryCompanyTV;
         TextView inquiryStatusTV;
         TextView inquiryAssignedToTV;
+        TextView inquiryCreateDateTV;
+        TextView inquiryEditDateTV;
+        TextView consultantTV;
+        TextView mainContractorTV;
+        TextView subContractorTV;
 
         public InquiryViewHolder(View itemView) {
             super(itemView);
+            layout = (LinearLayout) itemView.findViewById(R.id.inquiryRow_layout);
             inquiryNoTV = (TextView) itemView.findViewById(R.id.inquiryRow_inquiryNoTV);
             inquirySubjectTV = (TextView) itemView.findViewById(R.id.inquiryRow_inquirySubjectTV);
             inquiryCompanyTV = (TextView) itemView.findViewById(R.id.inquiryRow_companyNameTV);
             inquiryStatusTV = (TextView) itemView.findViewById(R.id.inquiryRow_inquiryStatusTV);
             inquiryAssignedToTV = (TextView) itemView.findViewById(R.id.inquiryRow_inquiryAssignedToTV);
+            inquiryCreateDateTV = (TextView) itemView.findViewById(R.id.inquiryRow_createDate);
+            inquiryEditDateTV = (TextView) itemView.findViewById(R.id.inquiryRow_editDate);
+            consultantTV = (TextView) itemView.findViewById(R.id.inquiryRow_ConsultantTV);
+            mainContractorTV = (TextView) itemView.findViewById(R.id.inquiryRow_mainContractorTV);
+            subContractorTV = (TextView) itemView.findViewById(R.id.inquiryRow_subContractorTV);
 
         }
     }
 
-    public static void addNewInquiry(Inquiry newInquiry){
-        data.add(newInquiry);
-        InquiryFragment.recyclerAdapter.notifyDataSetChanged();
-    }
 }

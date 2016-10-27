@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Navigation Header-->
+    <dimen name="navHeader_layoutWidth">300dp</dimen>
+    <dimen name="navHeader_layoutHeight">220dp</dimen>
+    <dimen name="navView_menuTextSize">18sp</dimen>
+
+    <!--FAB-->
+    <dimen name="floatMarginTop">730dp</dimen>
+    <dimen name="floatMarginLeft">500dp</dimen>
+    <dimen name="floatMarginTopSecond">680dp</dimen>
+
+    <!--Account Add new Activity Dimens-->
+    <dimen name="account_viewTextSize">15sp</dimen>
+    <dimen name="account_mainTextSize">18sp</dimen>
+    <dimen name="account_groupTextLeftPadding">10dp</dimen>
+    <dimen name="account_groupTextSize">18sp</dimen>
+    <dimen name="account_secondaryTextSize">14sp</dimen>
+    <dimen name="account_TV_rightPadding">15dp</dimen>
+    <dimen name="account_TV_viewWidth">180dp</dimen>
+    <dimen name="account_viewHeight">50dp</dimen>
+
+
+    <!--Calendar Section-->
+    <dimen name="calendar_AddEventFAB_marginLeft">500dp</dimen>
+</resources>

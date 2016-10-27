@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poListRecyclerRow_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:minHeight="56dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/po_LeftPadding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/poListRecyclerRow_poNOTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PO Number"
+            android:textColor="@color/mainText"
+            android:layout_gravity="center_vertical"/>
+
+
+        <TextView
+            android:id="@+id/poListRecyclerRow_poTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Title"
+            android:textColor="@color/mainText"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/poListRecyclerRow_companyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Client Name"
+            android:textColor="@color/mainText"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+</LinearLayout>

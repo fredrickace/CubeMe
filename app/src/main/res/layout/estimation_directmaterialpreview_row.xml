@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/directMaterialPreviewRow_jobName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Job Name"
+            android:textColor="@color/navHeader"
+            android:textSize="@dimen/account_secondaryTextSize"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/directMaterialPreviewRow_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/estimationView_headingTextSize" />
+
+        <TextView
+            android:id="@+id/directMaterialPreviewRow_dimension"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Dimension"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/estimationView_headingTextSize" />
+
+        <TextView
+            android:id="@+id/directMaterialPreviewRow_NoOfUnits"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="No of Units"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/estimationView_headingTextSize" />
+
+        <TextView
+            android:id="@+id/directMaterialPreviewRow_budget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Budget"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/estimationView_headingTextSize" />
+
+        <TextView
+            android:id="@+id/directMaterialPreviewRow_UnitPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Unit Price"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+        <TextView
+            android:id="@+id/directMaterialPreviewRow_Total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center|fill_vertical"
+            android:text="Total Price"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/estimationView_headingTextSize" />
+
+
+    </LinearLayout>
+</LinearLayout>

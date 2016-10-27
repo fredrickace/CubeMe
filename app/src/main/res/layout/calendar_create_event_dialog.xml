@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme"
+    tools:context="com.cube_me.cubeme.Calendar.CalendarCreateEventDialog">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/navHeader"
+        android:gravity="center"
+        android:text="Add new Event"
+        android:textSize="@dimen/account_groupTextSize"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/calendarEventNew_titleET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calendarDialog_ETHeight"
+            android:hint="Title"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/account_mainTextSize"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/calendarEventNew_DateET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calendarDialog_ETHeight"
+            android:hint="Date"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/account_mainTextSize"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+        <Spinner
+            android:id="@+id/calendarEventNew_ClientSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/calendarDialog_ETHeight"
+            android:hint="Client"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/account_mainTextSize"/>
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/calendarEventNew_DescET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textSize="@dimen/account_mainTextSize"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/calendarEventNew_ReportsET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reports"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textSize="@dimen/account_mainTextSize"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/calendarEventNew_addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccentOption"
+        android:text="Add Event"/>
+
+</LinearLayout>

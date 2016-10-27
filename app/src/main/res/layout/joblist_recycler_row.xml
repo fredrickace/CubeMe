@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jobListRow_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/jobs_LeftPadding">
+
+        <TextView
+            android:id="@+id/jobListRow_jobNoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="JobNo"
+            android:textColor="@color/mainText" />
+
+        <TextView
+            android:id="@+id/jobListRow_jobNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="JobName"
+            android:textColor="@color/mainText" />
+
+        <TextView
+            android:id="@+id/jobListRow_clientNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Client Name"
+            android:textColor="@color/mainText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/jobs_LeftPadding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Assigned To"
+            android:gravity="right"
+            android:paddingRight="@dimen/jobs_RightPadding"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/jobListRow_assignedToTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textColor="@color/secondaryText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/jobs_LeftPadding"
+        android:layoutDirection="rtl">
+
+        <TextView
+            android:id="@+id/jobListRow_startDateTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Start Date"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/jobs_DateText" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="Start Date"
+            android:gravity="right"
+            android:paddingRight="@dimen/jobs_RightPadding"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/jobs_DateText" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/jobs_LeftPadding"
+        android:layoutDirection="rtl">
+
+
+        <TextView
+            android:id="@+id/jobListRow_endDateTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="End Date"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/jobs_DateText" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="  End Date"
+            android:gravity="right"
+            android:paddingRight="@dimen/jobs_RightPadding"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/jobs_DateText" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

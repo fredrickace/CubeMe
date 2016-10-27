@@ -10,4 +10,8 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@color/colorText</item>
     </style>
+
+    <style name="DatePickerTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/colorAccent</item>
+    </style>
 </resources>

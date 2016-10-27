@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/mainText</item>
     </style>
 
     <style name="MyCustomTheme" parent="ThemeOverlay.AppCompat.Light">
@@ -27,9 +28,49 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="myToggle">
+        <item name="android:textOn">""</item>
+        <item name="android:textOff">""</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+        <item name="android:background">@drawable/my_btn_toggle_bg</item>
+    </style>
+
+    <style name="CustomDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:textColor">@color/ivory</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/ivory</item>
+    </style>
+
+    <style name="DatePickerTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+    </style>
 
 
+    <style name="CustomFullScreenDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:title">My Text</item>
+        <item name="android:textColor">@color/ivory</item>
+        <!--<item name="android:windowMinWidthMajor">90%</item>-->
+        <!--<item name="android:windowMinWidthMinor">90%</item>-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    
+    <style name="navigationView">
+        <item name="colorPrimary">@color/colorAccentOption</item>
+        <item name="android:textSize">@dimen/navView_menuTextSize</item>
+        <item name="android:state_pressed">true</item>
 
+    </style>
 
+    <style name="AlertDialogCustom" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 
 </resources>

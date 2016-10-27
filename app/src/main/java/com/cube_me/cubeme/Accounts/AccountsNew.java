@@ -1,6 +1,7 @@
 package com.cube_me.cubeme.Accounts;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -34,10 +35,11 @@ public class AccountsNew extends AppCompatActivity {
     TextView companyNameTV;
     TextView contactPersonTV;
     EditText contactWebEditText;
-    ImageButton accountAddImageButton;
+    ImageButton accountAddPhoneNoImageButton;
     LinearLayout newPhoneLinearLayout;
     LinearLayout accountShippingAddressLinearLayout;
     CheckBox shippingAddressCheckBox;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +53,10 @@ public class AccountsNew extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setTitle("Add Account");
 
-//        Basic Init
+       // BASIC INIT
+        i = getIntent();
         accountShippingAddressLinearLayout = (LinearLayout) findViewById(R.id.account_shippingAddressLayout);
-//        Setting Up CheckBox for Shipping address automation
+        //SETTING UP CHECKBOX FOR SHIPPING ADDRESS AUTOMATION
 
         shippingAddressCheckBox = (CheckBox) findViewById(R.id.account_shippingAddressCheckBox);
         shippingAddressCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -75,11 +78,11 @@ public class AccountsNew extends AppCompatActivity {
 
         companyNameEditText = (EditText) findViewById(R.id.account_companyNameEditText);
 
-//        Setting Company Name Mandatory with *
+        //SETTING COMPANY NAME MANDATORY WITH *
         companyNameTV = (TextView)findViewById(R.id.account_companyNameTextView);
         companyNameTV.setText(buildString(companyNameTV.getText().toString()));
 
-//        Setting Company Contact Person Mandatory with *
+        //SETTING COMPANY CONTACT PERSON MANDATORY WITH *
         contactPersonTV = (TextView)findViewById(R.id.account_contactPersonTextView);
         contactPersonTV.setText(buildString(contactPersonTV.getText().toString()));
 
@@ -93,7 +96,7 @@ public class AccountsNew extends AppCompatActivity {
             }
         });
 
-//        Setting the keyboard Event Listener on keyBoard
+        //SETTING THE KEYBOARD EVENT LISTENER ON KEYBOARD
         contactWebEditText = (EditText)findViewById(R.id.account_webEditText);
         contactWebEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
@@ -109,10 +112,10 @@ public class AccountsNew extends AppCompatActivity {
 
         });
 
-//        Setting Up the dynamic UI addition of new Phone number layout
+        //SETTING UP THE DYNAMIC UI ADDITION OF NEW PHONE NUMBER LAYOUT
         newPhoneLinearLayout = (LinearLayout)findViewById(R.id.phoneRowContainer);
-        accountAddImageButton = (ImageButton) findViewById(R.id.Account_addImageButton);
-        accountAddImageButton.setOnClickListener(new View.OnClickListener() {
+        accountAddPhoneNoImageButton = (ImageButton) findViewById(R.id.Account_addPhoneNoImageButton);
+        accountAddPhoneNoImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -130,9 +133,12 @@ public class AccountsNew extends AppCompatActivity {
     }
 
     private void addNewAccount(){
-        Accounts newAccount = new Accounts(companyNameEditText.getText().toString(),contactPersonAutoCompleteTV.getText().toString());
-        AccountsRecyclerAdapter.addNewAccounts(newAccount);
-        onBackPressed();
+        Accounts newAccount = new Accounts();
+        newAccount.setAccountContactName(contactPersonAutoCompleteTV.getText().toString());
+        newAccount.setAccountName(companyNameEditText.getText().toString());
+        i.putExtra("NewAccount",newAccount);
+        setResult(0,i);
+        finish();
     }
 
     @Override
@@ -159,29 +165,10 @@ public class AccountsNew extends AppCompatActivity {
         contactPersonAutoCompleteTV.setAdapter(contactPersonAdapter);
     }
 
-
-
-//    public void initContactSpinner(){
-//
-//        contactSpinner = (Spinner) findViewById(R.id.spinner_contactPerson);
-//
-//        String[] items = getResources().getStringArray(R.array.contact_spinner);
-//
-//        ArrayAdapter adapter = ArrayAdapter.createFromResource(getApplicationContext(),R.array.contact_spinner,R.layout.spinner_layout);
-//        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
-//        contactSpinner.setAdapter(adapter);
-//
-////        contactSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-////            @Override
-////            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-////                Toast.makeText(AccountsNew.this, "Spinner OKAY", Toast.LENGTH_SHORT).show();
-////            }
-////
-////            @Override
-////            public void onNothingSelected(AdapterView<?> parent) {
-////                Toast.makeText(AccountsNew.this, "You didn't Select Any :)", Toast.LENGTH_SHORT).show();
-////            }
-////        });
-//
-//    }
+    @Override
+    public void onBackPressed() {
+        setResult(1);
+        finish();
+        super.onBackPressed();
+    }
 }

@@ -29,6 +29,7 @@
         android:layout_height="match_parent"
         android:clickable="true"
         android:layout_gravity="start"
+        app:theme="@style/navigationView"
         app:menu="@menu/menu_navigation"
         app:headerLayout="@layout/nav_header"/>
 </android.support.v4.widget.DrawerLayout>

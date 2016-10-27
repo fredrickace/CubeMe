@@ -2,26 +2,94 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cube_me.cubeme">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait">
+        <receiver android:name=".NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".MainActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
         <activity android:name=".BaseActivity" />
-        <activity android:name=".Accounts.AccountsNew" />
-        <activity android:name=".Contacts.ContactNew" />
-        <activity android:name=".Accounts.AccountView" />
-        <activity android:name=".Inquiry.InquiryNew"></activity>
+        <activity
+            android:name=".Accounts.AccountsNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Contacts.ContactNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Accounts.AccountView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inquiry.InquiryNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Estimation.Estimation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Estimation.EstimationDirectMaterial"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Estimation.EstimationOtherMaterials"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Estimation.EstimationConsumables"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Estimation.EstimationPreview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Estimation.EstimationSaved"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Quotations.QuotationNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inquiry.InquirySaved"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Inquiry.InquiryView"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PurchaseOrder.PurchaseOrderNew" />
+        <activity android:name=".Jobs.JobNew"></activity>
     </application>
 
 </manifest>

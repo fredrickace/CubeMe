@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quoViewRecyclerRow_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/quo_LeftPadding"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/quoViewRecyclerRow_QuoNoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/quo_recyclerViewTVHeight"
+            android:layout_weight="1"
+            android:text="Quo Number"
+            android:textColor="@color/mainText"/>
+        <TextView
+            android:id="@+id/quoViewRecyclerRow_QuoTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/quo_recyclerViewTVHeight"
+            android:layout_weight="1"
+            android:text="Title"
+            android:textColor="@color/mainText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quoViewRecyclerRow_QuoClientNameTV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quo_recyclerViewTVHeight"
+            android:layout_weight="2"
+            android:gravity="left|top"
+            android:text="Client Name"
+            android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|top"
+            android:text="Created On:"
+            android:textSize="12sp"
+            android:paddingRight="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/secondaryText"/>
+
+        <TextView
+            android:id="@+id/quoViewRecyclerRow_QuoCreateDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right|top"
+            android:textSize="12sp"
+            android:paddingRight="@dimen/quo_RightPadding"
+            android:textColor="@color/secondaryText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quoViewRecyclerRow_QuoStatusTV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/quo_recyclerViewTVHeight"
+            android:layout_weight="2"
+            android:gravity="left|top"
+            android:text="Status"
+            android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/colorAccent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|top"
+            android:text="Edit On:"
+            android:textSize="12sp"
+            android:paddingRight="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/secondaryText"/>
+
+        <TextView
+            android:id="@+id/quoViewRecyclerRow_QuoEditDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right|top"
+            android:textSize="12sp"
+            android:paddingRight="@dimen/accountViewDetail_groupLeftPadding"
+            android:textColor="@color/secondaryText"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/quoViewRecyclerRow_QuoTotalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/quo_recyclerViewTVHeight"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/quo_LeftPadding"
+        android:text="Total"
+        android:textColor="@color/mainText"/>
+
+</LinearLayout>
