@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:theme="@style/AppTheme"
-    tools:context="com.cube_me.cubeme.Calendar.CalendarCreateEventDialog">
+    tools:context="com.cube_me.cubeme_crm.Calendar.CalendarCreateEventDialog">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

@@ -152,6 +152,37 @@
 
 
                     <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_weight="1.25"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Client Reference No"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <EditText
+                        android:id="@+id/inquiry_referenceNoET"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_weight="2.75"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
                         android:id="@+id/inquiry_statusTextView"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
@@ -163,14 +194,43 @@
                         android:textColor="@color/secondaryText"
                         android:textSize="@dimen/inquiryNew_secondaryTextSize" />
 
-                    <Spinner
-                        android:id="@+id/inquiry_statusSpinner"
+                    <TextView
+                        android:id="@+id/inquiry_statusTV"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.75"
                         android:background="@drawable/custom_edittext"
-                        android:imeOptions="actionNext"
-                        android:inputType="textCapSentences"
+                        android:gravity="start|fill_vertical"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_weight="1.25"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Stage"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <TextView
+                        android:id="@+id/inquiry_stageTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.75"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="start|fill_vertical"
                         android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
                         android:textColor="@color/mainText"
                         android:textSize="@dimen/inquiryNew_mainTextSize"
@@ -195,19 +255,142 @@
                         android:textColor="@color/secondaryText"
                         android:textSize="@dimen/inquiryNew_secondaryTextSize" />
 
-                    <AutoCompleteTextView
-                        android:id="@+id/inquiry_companyAutoComplete"
+                    <Spinner
+                        android:id="@+id/inquiry_companySpinner"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="2.75"
                         android:background="@drawable/custom_edittext"
-                        android:imeOptions="actionNext"
-                        android:inputType="textAutoComplete|textCapSentences"
                         android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
                         android:textColor="@color/mainText"
                         android:textSize="@dimen/inquiryNew_mainTextSize"
                         android:theme="@style/EditTextTheme" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_weight="1.25"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Company Number"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+
+                    <Spinner
+                        android:id="@+id/inquiry_companyPhoneNumberSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.75"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/inquiry_companyEmailLabelTV"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_weight="1.25"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Company Email"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+
+                    <Spinner
+                        android:id="@+id/inquiry_companyEmailSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.75"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_weight="1.25"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Company Address"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+
+                    <Spinner
+                        android:id="@+id/inquiry_companyAddressSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.75"
+                        android:background="@drawable/custom_edittext"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+
+                </LinearLayout>
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/inquiry_companyDetailsTextViewLabel"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1.25"-->
+                        <!--android:background="@color/textViewBackGround"-->
+                        <!--android:gravity="right|fill_vertical"-->
+                        <!--android:paddingRight="@dimen/inquiryNew_TV_rightPadding"-->
+                        <!--android:text="Company Details"-->
+                        <!--android:textColor="@color/secondaryText"-->
+                        <!--android:textSize="@dimen/inquiryNew_secondaryTextSize" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/inquiry_companyDetailsTextView"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="2.75"-->
+                        <!--android:background="@drawable/custom_edittext"-->
+                        <!--android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"-->
+                        <!--android:minHeight="@dimen/inquiryNew_minHeight"-->
+                        <!--android:textColor="@color/mainText"-->
+                        <!--android:textSize="@dimen/inquiryNew_mainTextSize"-->
+                        <!--android:theme="@style/EditTextTheme" />-->
+                <!--</LinearLayout>-->
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -257,8 +440,8 @@
                         android:textSize="@dimen/inquiryNew_secondaryTextSize"
                         android:textColor="@color/secondaryText" />
 
-                    <AutoCompleteTextView
-                        android:id="@+id/inquiry_jobsConsultantACTV"
+                    <Spinner
+                        android:id="@+id/inquiry_jobsConsultantSpinner"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="2.75"
@@ -288,8 +471,8 @@
                         android:textSize="@dimen/inquiryNew_secondaryTextSize"
                         android:textColor="@color/secondaryText" />
 
-                    <AutoCompleteTextView
-                        android:id="@+id/inquiry_jobsContractorACTV"
+                    <Spinner
+                        android:id="@+id/inquiry_jobsContractorSpinner"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="2.75"
@@ -319,8 +502,8 @@
                         android:textSize="@dimen/inquiryNew_secondaryTextSize"
                         android:textColor="@color/secondaryText" />
 
-                    <AutoCompleteTextView
-                        android:id="@+id/inquiry_jobsSubContractorACTV"
+                    <Spinner
+                        android:id="@+id/inquiry_jobsSubContractorSpinner"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="2.75"
@@ -351,8 +534,8 @@
                         android:textColor="@color/secondaryText"
                         android:textSize="@dimen/inquiryNew_secondaryTextSize" />
 
-                    <AutoCompleteTextView
-                        android:id="@+id/inquiry_contactPersonAutoComplete"
+                    <Spinner
+                        android:id="@+id/inquiry_contactPersonSpinner"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="2.75"
@@ -372,7 +555,7 @@
 
 
                     <TextView
-                        android:id="@+id/inquiry_contactPersonDesignationTextView"
+                        android:id="@+id/inquiry_contactPersonDesignationTextViewLabel"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="1.25"
@@ -383,14 +566,14 @@
                         android:textColor="@color/secondaryText"
                         android:textSize="@dimen/inquiryNew_secondaryTextSize" />
 
-                    <EditText
-                        android:id="@+id/inquiry_contactPersonDesignationET"
+                    <TextView
+                        android:id="@+id/inquiry_contactPersonDesignationTextView"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_height="match_parent"
                         android:layout_weight="2.75"
+                        android:gravity="start|center"
+                        android:layout_gravity="center"
                         android:background="@drawable/custom_edittext"
-                        android:imeOptions="actionNext"
-                        android:inputType="textAutoComplete|textCapSentences"
                         android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
                         android:textColor="@color/mainText"
                         android:textSize="@dimen/inquiryNew_mainTextSize"
@@ -404,7 +587,7 @@
 
 
                     <TextView
-                        android:id="@+id/inquiry_contactNumberTextView"
+                        android:id="@+id/inquiry_contactNumberTextViewLabel"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="1.25"
@@ -415,27 +598,12 @@
                         android:textColor="@color/secondaryText"
                         android:textSize="@dimen/inquiryNew_secondaryTextSize" />
 
-                    <EditText
-                        android:id="@+id/inquiry_contactNumberCountryCodeEditText"
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/inquiryNew_viewHeight"
-                        android:layout_weight=".75"
-                        android:background="@drawable/custom_edittext"
-                        android:hint="+974"
-                        android:imeOptions="actionNext"
-                        android:inputType="phone"
-                        android:maxLength="4"
-                        android:gravity="center"
-                        android:paddingLeft="@dimen/editText_leftPadding"
-                        android:textColor="@color/mainText"
-                        android:textSize="@dimen/account_mainTextSize"
-                        android:theme="@style/EditTextTheme" />
 
-                    <EditText
-                        android:id="@+id/inquiry_contactNumberEditText"
+                    <Spinner
+                        android:id="@+id/inquiry_contactNumberSpinner"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/inquiryNew_viewHeight"
-                        android:layout_weight="2"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.75"
                         android:background="@drawable/custom_edittext"
                         android:imeOptions="actionNext"
                         android:inputType="number"
@@ -452,7 +620,6 @@
 
 
                     <TextView
-                        android:id="@+id/inquiry_emailTextView"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="1.25"
@@ -463,8 +630,8 @@
                         android:textColor="@color/secondaryText"
                         android:textSize="@dimen/inquiryNew_secondaryTextSize" />
 
-                    <EditText
-                        android:id="@+id/inquiry_emailEditText"
+                    <Spinner
+                        android:id="@+id/inquiry_emailSpinner"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/inquiryNew_viewHeight"
                         android:layout_weight="2.75"
@@ -472,6 +639,39 @@
                         android:imeOptions="actionNext"
                         android:inputType="textEmailAddress"
                         android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/inquiryNew_mainTextSize"
+                        android:theme="@style/EditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/inquiry_commentsTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/inquiryNew_viewHeight"
+                        android:layout_weight="1.25"
+                        android:background="@color/textViewBackGround"
+                        android:gravity="right|fill_vertical"
+                        android:paddingRight="@dimen/inquiryNew_TV_rightPadding"
+                        android:text="Comments"
+                        android:textColor="@color/secondaryText"
+                        android:textSize="@dimen/inquiryNew_secondaryTextSize" />
+
+                    <EditText
+                        android:id="@+id/inquiry_commentsEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.75"
+                        android:background="@drawable/custom_edittext"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="@dimen/inquiryNew_mainTextLeftPadding"
+                        android:minHeight="@dimen/inquiryNew_minHeight"
                         android:textColor="@color/mainText"
                         android:textSize="@dimen/inquiryNew_mainTextSize"
                         android:theme="@style/EditTextTheme" />
@@ -495,8 +695,8 @@
                         android:textColor="@color/secondaryText"
                         android:textSize="@dimen/inquiryNew_secondaryTextSize" />
 
-                    <AutoCompleteTextView
-                        android:id="@+id/inquiry_assignAutoText"
+                    <Spinner
+                        android:id="@+id/inquiry_assignToSpinner"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="2.75"
@@ -514,7 +714,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="Add"
+                    android:text="Create"
                     android:textColor="@color/mainText"
                     android:textSize="@dimen/inquiryNew_mainTextSize" />
 

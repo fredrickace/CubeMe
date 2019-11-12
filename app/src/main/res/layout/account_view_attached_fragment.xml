@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ivory"
-    tools:context="com.cube_me.cubeme.Accounts.AccountViewAttachedFragment">
+    tools:context="com.cube_me.cubeme_crm.Accounts.AccountViewAttachedFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -27,6 +27,7 @@
                     android:background="@color/groupBackground"
                     android:orientation="horizontal">
 
+                    <!--INQUIRY SECTION-->
                     <TextView
                         android:layout_width="@dimen/foldableGroupTVWidth"
                         android:layout_height="@dimen/foldableGroupTVHeight"
@@ -37,7 +38,7 @@
                         android:textSize="@dimen/account_groupTextSize" />
 
                     <ImageButton
-                        android:id="@+id/addImageButton"
+                        android:id="@+id/accountAttached_inquiryDownIB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -47,7 +48,7 @@
                         android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
 
                     <ImageButton
-                        android:id="@+id/removeImageButton"
+                        android:id="@+id/accountAttached_inquiryUPIB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -60,14 +61,146 @@
 
                 </RelativeLayout>
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/inquiryAttached_recycler"
+                    android:id="@+id/accountAttached_inquiryRecycler"
                     android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                 </android.support.v7.widget.RecyclerView>
 
+                <!--ESTIMATION SECTION-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="@dimen/foldableGroupTVWidth"
+                        android:layout_height="@dimen/foldableGroupTVHeight"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+                        android:text="Estimation"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/account_groupTextSize" />
+
+                    <ImageButton
+                        android:id="@+id/accountAttached_estDownIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/accountAttached_estUpIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_remove_black_24dp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/accountAttached_estimationRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <!--QUOTATION SECTION-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/foldableGroupTVWidth"
+                        android:layout_height="@dimen/foldableGroupTVHeight"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+                        android:text="Quotation"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/account_groupTextSize" />
+
+                    <ImageButton
+                        android:id="@+id/accountAttached_quoDownIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/accountAttached_quoUPIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_remove_black_24dp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/accountAttached_quotationRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <!--PO SECTION-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/foldableGroupTVWidth"
+                        android:layout_height="@dimen/foldableGroupTVHeight"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/accountViewDetail_groupLeftPadding"
+                        android:text="Purchase Orders"
+                        android:textColor="@color/mainText"
+                        android:textSize="@dimen/account_groupTextSize" />
+
+                    <ImageButton
+                        android:id="@+id/accountAttached_PODownIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/accountAttached_POUpIB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/groupBackground"
+                        android:src="@drawable/ic_remove_black_24dp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/accountAttached_PORecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <!--JOBS SECTION-->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -84,15 +217,17 @@
                         android:textSize="@dimen/account_groupTextSize" />
 
                     <ImageButton
+                        android:id="@+id/accountAttached_jobDownIB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="5dp"
                         android:background="@color/groupBackground"
-                        android:src="@drawable/ic_add_black_24dp" />
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
 
                     <ImageButton
+                        android:id="@+id/accountAttached_jobUpIB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -102,9 +237,16 @@
                         android:src="@drawable/ic_remove_black_24dp"
                         android:visibility="invisible" />
 
-
                 </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/accountAttached_jobsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+
             </LinearLayout>
+
         </ScrollView>
 
 

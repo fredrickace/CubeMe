@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.cube_me.cubeme.Inquiry.InquirySaved">
+    tools:context="com.cube_me.cubeme_crm.Inquiry.InquirySaved">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,29 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Inquiry Number"
-                android:textColor="@color/colorAccentOption"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="left|center"
-                android:text="   Subject"
-                android:textColor="@color/colorAccentOption"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/inquirySaved_recycler"

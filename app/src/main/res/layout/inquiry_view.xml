@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.cube_me.cubeme.Inquiry.InquiryView">
+    tools:context="com.cube_me.cubeme_crm.Inquiry.InquiryView">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,12 +15,12 @@
             android:layout_height="56dp"
             android:layout_width="match_parent"/>
 
-        <com.cube_me.cubeme.tabs.SlidingTabLayout
+        <com.cube_me.cubeme_crm.tabs.SlidingTabLayout
             android:id="@+id/inquiryView_SlideTab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        </com.cube_me.cubeme.tabs.SlidingTabLayout>
+        </com.cube_me.cubeme_crm.tabs.SlidingTabLayout>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/inquiryView_ViewPager"

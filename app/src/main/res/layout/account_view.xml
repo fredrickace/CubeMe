@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.cube_me.cubeme.Accounts.AccountView">
+    tools:context="com.cube_me.cubeme_crm.Accounts.AccountView">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,12 +17,12 @@
             android:layout_height="56dp"
             android:layout_width="match_parent"/>
 
-        <com.cube_me.cubeme.tabs.SlidingTabLayout
+        <com.cube_me.cubeme_crm.tabs.SlidingTabLayout
             android:id="@+id/accountViewSlideTab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        </com.cube_me.cubeme.tabs.SlidingTabLayout>
+        </com.cube_me.cubeme_crm.tabs.SlidingTabLayout>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/accountsViewViewPager"

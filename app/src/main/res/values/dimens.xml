@@ -70,6 +70,7 @@
     <dimen name="inquiryNew_TV_rightPadding">15dp</dimen>
     <dimen name="inquiryNew_TV_viewWidth">120dp</dimen>
     <dimen name="inquiryNew_viewHeight">50dp</dimen>
+    <dimen name="inquiryNew_minHeight">80dp</dimen>
     <dimen name="inquiryNew_mainTextLeftPadding">5dp</dimen>
     <dimen name="inquiryRecyclerRow_LabelText">12sp</dimen>
 
@@ -123,7 +124,6 @@
     <dimen name="jobs_MainText">14sp</dimen>
     <dimen name="jobs_DateText">12sp</dimen>
     <dimen name="jobs_subSectionViewHeight">30dp</dimen>
-
 
 
 </resources>

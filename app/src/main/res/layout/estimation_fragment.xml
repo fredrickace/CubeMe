@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cube_me.cubeme.Estimation.EstimationFragment">
+    tools:context="com.cube_me.cubeme_crm.Estimation.EstimationFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

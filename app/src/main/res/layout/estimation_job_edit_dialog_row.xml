@@ -8,140 +8,209 @@
     <LinearLayout
         android:id="@+id/estJobEdit_TVLayout"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:background="@color/deviceBackground"
-        android:gravity="center"
+        android:gravity="start|center"
         android:orientation="horizontal"
+        android:paddingLeft="@dimen/full_padding"
         android:visibility="visible">
 
-        <TextView
-            android:id="@+id/estJobEdit_jobNameTV"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:foregroundTint="@color/imageButtonTint"
-            android:gravity="center"
-            android:text="Job Name"
-            android:textColor="@color/secondaryText"
-            android:textSize="@dimen/jobDialog_TextSize" />
-
-        <TextView
-            android:id="@+id/estJobEdit_jobUnitMeasurementTV"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Measurement Unit"
-            android:textColor="@color/secondaryText"
-            android:textSize="@dimen/jobDialog_TextSize" />
-
-        <TextView
-            android:id="@+id/estJobEdit_jobNoOfUnitsTV"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="No of Units"
-            android:textColor="@color/secondaryText"
-            android:textSize="@dimen/jobDialog_TextSize" />
-
-        <ImageButton
-            android:id="@+id/estJobEdit_editButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@color/deviceBackground"
-            android:paddingLeft="5dp"
-            android:src="@drawable/ic_mode_edit_black_24dp"
-            android:tint="@color/imageButtonTint" />
+            android:layout_weight="8"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/estJobEdit_removeButton"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/estJobEdit_jobNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:foregroundTint="@color/imageButtonTint"
+                android:gravity="start|center"
+                android:padding="@dimen/full_padding"
+                android:text="Job Name"
+                android:textColor="@color/secondaryText"
+                android:textSize="@dimen/jobDialog_TextSize" />
+
+            <TextView
+                android:id="@+id/estJobEdit_jobUnitMeasurementTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
+                android:padding="@dimen/full_padding"
+                android:text="Measurement Unit"
+                android:textColor="@color/secondaryText"
+                android:textSize="@dimen/jobDialog_TextSize" />
+
+            <TextView
+                android:id="@+id/estJobEdit_jobDescTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
+                android:padding="@dimen/full_padding"
+                android:text="Description"
+                android:textColor="@color/secondaryText"
+                android:textSize="@dimen/jobDialog_TextSize" />
+
+            <TextView
+                android:id="@+id/estJobEdit_jobNoOfUnitsTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
+                android:padding="@dimen/full_padding"
+                android:text="No of Units"
+                android:textColor="@color/secondaryText"
+                android:textSize="@dimen/jobDialog_TextSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@color/deviceBackground"
-            android:paddingLeft="5dp"
-            android:src="@drawable/ic_delete_black_24dp"
-            android:tint="@color/imageButtonTint" />
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/estJobEdit_editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@color/deviceBackground"
+                android:padding="@dimen/full_padding"
+                android:src="@drawable/ic_mode_edit_black_24dp"
+                android:tint="@color/imageButtonTint" />
+
+            <ImageButton
+                android:id="@+id/estJobEdit_removeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@color/deviceBackground"
+                android:padding="@dimen/full_padding"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:tint="@color/imageButtonTint" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/estJobEdit_ETLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="@color/deviceBackground"
         android:focusable="false"
-        android:gravity="center"
+        android:padding="@dimen/full_padding"
         android:orientation="horizontal"
         android:visibility="gone">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:paddingBottom="8dp">
-
-            <EditText
-                android:id="@+id/estJobEdit_jobNameEText"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="Job Name"
-                android:imeOptions="actionNext"
-                android:inputType="textCapSentences"
-                android:text="Job Name"
-                android:textColor="@color/secondaryText"
-                android:textSize="@dimen/jobDialog_TextSize" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:paddingBottom="8dp">
-
-            <EditText
-                android:id="@+id/estJobEdit_jobUnitMeasurementEtext"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="Measurement Unit"
-                android:imeOptions="actionNext"
-                android:inputType="textCapSentences"
-                android:text="Measurement Unit"
-                android:textColor="@color/secondaryText"
-                android:textSize="@dimen/jobDialog_TextSize" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:paddingBottom="8dp">
-
-            <EditText
-                android:id="@+id/estJobEdit_jobNoOfUnitsEtext"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="No.of Units"
-                android:text="No.of Units"
-                android:inputType="numberDecimal"
-                android:textColor="@color/secondaryText"
-                android:textSize="@dimen/jobDialog_TextSize" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <ImageButton
-            android:id="@+id/estJobEdit_finishImageButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@color/deviceBackground"
-            android:paddingLeft="5dp"
-            android:src="@drawable/ic_check_black_24dp"
-            android:tint="@color/imageButtonTint" />
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp">
+
+                <EditText
+                    android:id="@+id/estJobEdit_jobNameEText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center"
+                    android:gravity="start|center"
+                    android:hint="Job Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:text="Job Name"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/jobDialog_TextSize" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp">
+
+                <EditText
+                    android:id="@+id/estJobEdit_jobDescEText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center"
+                    android:gravity="start|center"
+                    android:hint="Job Description"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:text="Job Description"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/jobDialog_TextSize" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp">
+
+                <EditText
+                    android:id="@+id/estJobEdit_jobUnitMeasurementEtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:gravity="start|center"
+                    android:minHeight="@dimen/inquiryNew_minHeight"
+                    android:hint="Measurement Unit"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:text="Measurement Unit"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/jobDialog_TextSize" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp">
+
+                <EditText
+                    android:id="@+id/estJobEdit_jobNoOfUnitsEtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center"
+                    android:gravity="start|center"
+                    android:hint="No.of Units"
+                    android:inputType="numberDecimal"
+                    android:text="No.of Units"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/jobDialog_TextSize" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/estJobEdit_finishImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/deviceBackground"
+                android:paddingLeft="5dp"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="@color/imageButtonTint" />
+
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>

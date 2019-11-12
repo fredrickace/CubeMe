@@ -58,7 +58,7 @@
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:layout_gravity">center</item>
     </style>
-    
+
     <style name="navigationView">
         <item name="colorPrimary">@color/colorAccentOption</item>
         <item name="android:textSize">@dimen/navView_menuTextSize</item>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/full_padding">
+
+        <TextView
+            android:id="@+id/phoneRowTV_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="start|fill_vertical"
+            android:inputType="textCapWords"
+            android:layout_gravity="top|center"
+            android:paddingRight="@dimen/account_TV_rightPadding"
+            android:text="Label"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/accountViewDetail_TV_secondaryText" />
+
+        <TextView
+            android:id="@+id/phoneRowTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="start|fill_vertical"
+            android:autoLink="phone"
+            android:textColorLink="@color/phoneNumber"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/accountViewDetail_mainTV_leftPadding"
+            android:text="Phone Number"
+            android:textColor="@color/mainText"
+            android:textSize="@dimen/accountViewDetail_TV_mainText" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cube_me.cubeme">
+    package="com.cube_me.cubeme_crm">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -16,19 +15,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <receiver android:name=".NetworkChangeReceiver">
+        <receiver android:name="com.cube_me.cubeme_crm.NetworkChangeReceiver">
             <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        <activity android:name=".LoginActivity">
+
+        <activity android:name="com.cube_me.cubeme_crm.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.cube_me.cubeme_crm.MainActivity"
             android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->
@@ -48,48 +49,50 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".BaseActivity" />
+        <activity android:name="com.cube_me.cubeme_crm.BaseActivity" />
         <activity
-            android:name=".Accounts.AccountsNew"
+            android:name="com.cube_me.cubeme_crm.Accounts.AccountsNew"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Contacts.ContactNew"
+            android:name="com.cube_me.cubeme_crm.Contacts.ContactNew"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Accounts.AccountView"
+            android:name="com.cube_me.cubeme_crm.Accounts.AccountView"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Inquiry.InquiryNew"
+            android:name="com.cube_me.cubeme_crm.Inquiry.InquiryNew"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Estimation.Estimation"
+            android:name="com.cube_me.cubeme_crm.Estimation.Estimation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Estimation.EstimationDirectMaterial"
+            android:name="com.cube_me.cubeme_crm.Estimation.EstimationDirectMaterial"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Estimation.EstimationOtherMaterials"
+            android:name="com.cube_me.cubeme_crm.Estimation.EstimationOtherMaterials"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Estimation.EstimationConsumables"
+            android:name="com.cube_me.cubeme_crm.Estimation.EstimationConsumables"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Estimation.EstimationPreview"
+            android:name="com.cube_me.cubeme_crm.Estimation.EstimationPreview"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Estimation.EstimationSaved"
+            android:name="com.cube_me.cubeme_crm.Estimation.EstimationSaved"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Quotations.QuotationNew"
+            android:name="com.cube_me.cubeme_crm.Quotations.QuotationNew"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Inquiry.InquirySaved"
+            android:name="com.cube_me.cubeme_crm.Inquiry.InquirySaved"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Inquiry.InquiryView"
+            android:name="com.cube_me.cubeme_crm.Inquiry.InquiryView"
             android:screenOrientation="portrait" />
-        <activity android:name=".PurchaseOrder.PurchaseOrderNew" />
-        <activity android:name=".Jobs.JobNew"></activity>
+        <activity android:name="com.cube_me.cubeme_crm.PurchaseOrder.PurchaseOrderNew" />
+        <activity android:name="com.cube_me.cubeme_crm.Jobs.JobNew" />
+        <activity android:name="com.cube_me.cubeme_crm.Quotations.QuotationSaved" />
+        <activity android:name="com.cube_me.cubeme_crm.Quotations.QuotationView"/>
     </application>
 
 </manifest>

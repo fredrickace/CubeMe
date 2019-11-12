@@ -21,6 +21,8 @@
         android:textColor="@color/colorAccent"
         android:text="This is a test Message"
         android:layout_gravity="center_vertical"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:visibility="visible"/>
+
 
 </LinearLayout>

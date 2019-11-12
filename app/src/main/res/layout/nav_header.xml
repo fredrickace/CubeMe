@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navHeader_view"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/navHeader_layoutHeight"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/navHeader_layoutHeight"
     android:background="@color/navHeader">
 
-    <TextView
-        android:text="Welcome Fred!!!"
-        android:textColor="@color/navHeaderText"
+    <ImageView
+        android:id="@+id/navHeader_userPicIV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginStart="27dp"
-        android:id="@+id/textView"
-        android:textSize="20sp"
-        android:layout_marginTop="120dp" />
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/navHeader_userNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="fill_vertical"
+        android:gravity="fill_vertical"
+        android:text="TEXT"
+        android:textColor="@color/ivory" />
 </FrameLayout>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:theme="@style/AppTheme"
-    tools:context="com.cube_me.cubeme.Estimation.EstimationJobDialog">
+    tools:context="com.cube_me.cubeme_crm.Estimation.EstimationJobDialog">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,6 +49,22 @@
             android:background="@drawable/custom_edittext_1"
             android:gravity="center"
             android:hint="Job Name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/jobDialog_jobDescription"
+            style="@style/EditTextTheme"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_edittext_1"
+            android:gravity="center"
+            android:hint="Job Description"
             android:imeOptions="actionNext"
             android:inputType="textCapSentences" />
     </android.support.design.widget.TextInputLayout>

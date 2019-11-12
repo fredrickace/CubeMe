@@ -2,42 +2,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.cube_me.cubeme.Inquiry.InquiryFragment">
+    android:layout_height="wrap_content"
+    tools:context="com.cube_me.cubeme_crm.Inquiry.InquiryFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Inquiry Number"
-                android:textColor="@color/colorAccentOption"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="left|center"
-                android:text="   Subject"
-                android:textColor="@color/colorAccentOption"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_inquiry"
+        <com.cube_me.cubeme_crm.tabs.SlidingTabLayout
+            android:id="@+id/inquiryFragment_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/inquiryFragment_pageViewer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="@dimen/full_padding"-->
+            <!--android:textStyle="bold"-->
+            <!--android:background="@color/quotationHeaderBG"-->
+            <!--android:textColor="@color/colorAccent"-->
+            <!--android:text="Inquiry Created"/>-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/recycler_inquiry"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="@dimen/full_padding"-->
+            <!--android:textStyle="bold"-->
+            <!--android:background="@color/quotationHeaderBG"-->
+            <!--android:textColor="@color/colorAccent"-->
+            <!--android:text="Inquiry Assigned"/>-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/inquiry_assignedRecycler"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
 
     </LinearLayout>
 

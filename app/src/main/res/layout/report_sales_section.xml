@@ -21,7 +21,148 @@
         android:layout_gravity="center_vertical"
         android:gravity="center"
         android:text="This is a test Message"
-        android:textColor="@color/phoneNumber" />
+        android:textColor="@color/phoneNumber"
+        android:visibility="gone" />
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--INQUIRY REPORT SECTION-->
+            <LinearLayout
+                android:id="@+id/reportFrag_SRInquiryRecyclerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:padding="@dimen/full_padding"
+                    android:text="Inquiry"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/account_groupTextSize" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reportFrag_SRInquiryRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/full_padding" />
+
+            </LinearLayout>
+
+
+            <!--ESTIMATION REPORT SECTION-->
+            <LinearLayout
+                android:id="@+id/reportFrag_SREstimationRecyclerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:padding="@dimen/full_padding"
+                    android:text="Estimation"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/account_groupTextSize" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reportFrag_SREstimationRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/full_padding" />
+            </LinearLayout>
+
+            <!--QUOTATION REPORT SECTION-->
+            <LinearLayout
+                android:id="@+id/reportFrag_SRQuotationRecyclerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:padding="@dimen/full_padding"
+                    android:text="Quotation"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/account_groupTextSize" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reportFrag_SRQuotationRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/full_padding" />
+            </LinearLayout>
+
+            <!--PO REPORT SECTION-->
+            <LinearLayout
+                android:id="@+id/reportFrag_SRPoRecyclerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:padding="@dimen/full_padding"
+                    android:text="Purchase Orders"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/account_groupTextSize" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reportFrag_SRPoRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/full_padding" />
+            </LinearLayout>
+
+            <!--JOBS REPORT SECTION-->
+            <LinearLayout
+                android:id="@+id/reportFrag_SRJobsRecyclerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/groupBackground"
+                    android:padding="@dimen/full_padding"
+                    android:text="Jobs"
+                    android:textColor="@color/mainText"
+                    android:textSize="@dimen/account_groupTextSize" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reportFrag_SRJobsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/full_padding" />
+
+            </LinearLayout>
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

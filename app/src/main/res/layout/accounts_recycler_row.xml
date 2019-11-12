@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="start|fill_vertical"
+        android:layout_gravity="center"
         android:paddingLeft="10dp"
         android:textColor="@color/mainText"
         android:textSize="@dimen/account_mainTextSize"
@@ -20,21 +21,22 @@
 
     <TextView
         android:id="@+id/textView_contactName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="5dp"
         android:layout_weight="1"
         android:gravity="start|fill_vertical"
+        android:layout_gravity="center"
         android:padding="10dp"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/account_mainTextSize" />
 
-    <ImageView
-        android:id="@+id/deleteImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1" />
+    <!--<ImageView-->
+        <!--android:id="@+id/deleteImageView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="1" />-->
 
 
 </LinearLayout>

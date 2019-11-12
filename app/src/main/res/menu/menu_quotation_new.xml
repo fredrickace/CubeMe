@@ -7,4 +7,10 @@
         android:title="Save Word"
         android:icon="@drawable/ic_file_download_white_24dp"
         app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_quotation_saveOffline"
+        android:title="Save Offline"
+        android:icon="@drawable/ic_save_white_24dp"
+        app:showAsAction="always"/>
+
 </menu>
